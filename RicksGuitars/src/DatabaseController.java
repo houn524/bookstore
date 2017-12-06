@@ -3,6 +3,7 @@
  * 서술 : 데이터베이스를 이용한 연산들을 모두 관리해주는 클래스*/
 
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -40,31 +41,58 @@ public class DatabaseController {
 	}
 	
 	/********************** 데이터베이스에 책 추가 ****************************/
-	public boolean insertInstrument(Book newInstrument) {
-//		Statement statement = null;
-//		String sql = "insert ignore into " + newInstrument.getSpec().getProperty("instrumentType").toString()
+	public boolean insertBook(Book book) {
+		Statement statement = null;
+//		String sql = "insert ignore into book(id, title, publisher, author)"
 //				+ " values(";
 //
-//		sql += "'" + newInstrument.getSerialNumber() + "'";
-//		sql += ", '" + newInstrument.getPrice() + "'";
-//
-//		ArrayList specList = new ArrayList(newInstrument.getSpec().getProperties().values());
-//		for (int i = 0; i < specList.size() - 1; i++) {
+//		sql += "'" + book.getSerialNumber() + "'";
+
+		
+		
+		ArrayList specList = new ArrayList(book.getSpec().getProperties().values());
+		String sql = "insert ignore into book(id, title, publisher, author) values(?, ?, ?, ?)";
+	    PreparedStatement pstmt;
+		try {
+			pstmt = connection.prepareStatement(sql);
+		
+			pstmt.setString(1, String.valueOf(book.getSerialNumber()));
+			pstmt.setString(2, specList.get(0).toString());
+			pstmt.setString(3, specList.get(1).toString());
+			pstmt.setString(4, specList.get(2).toString());
+			int n = pstmt.executeUpdate();
+			
+			if (n > 0) {
+				System.out.println("책 추가 성공");
+				return true;
+			} else {
+				System.out.println("책 추가 실패");
+				return false;
+			}
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+		
+//		for (int i = 0; i < specList.size(); i++) {
 //			if (specList.get(i).toString().contains("'"))
 //				specList.set(i, specList.get(i).toString().replaceAll("'", "''"));
 //			sql += ", '" + specList.get(i).toString() + "'";
 //		}
-//
+
 //		sql += ")";
-//
+		
+
 //		try {
 //			statement = (Statement) connection.createStatement();
 //			int n = statement.executeUpdate(sql);
 //			if (n > 0) {
-//				System.out.println("악기 추가 성공");
+//				System.out.println("책 추가 성공");
 //				return true;
 //			} else {
-//				System.out.println("악기 추가 실패");
+//				System.out.println("책 추가 실패");
 //				return false;
 //			}
 //		} catch (SQLException e) {

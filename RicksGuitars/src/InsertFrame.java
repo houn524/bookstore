@@ -34,7 +34,7 @@ public class InsertFrame extends JFrame {
 	private List components;
 
 	public InsertFrame(String title, ObjectPanel instrumentPanel, DatabaseController dbController,
-			ArrayList _components, String instrumentType) {
+			ArrayList _components) {
 		this.dbController = dbController;
 		this.guitarPanel = guitarPanel;
 		this.components = new ArrayList();
@@ -43,12 +43,12 @@ public class InsertFrame extends JFrame {
 
 		/********************** 프레임 안의 컴포넌트들 설정 ****************************/
 		int i = 0;
-//		ArrayList enumList = new ArrayList();
-//		for (Object component : _components) {
-//			enumList.clear();
-//			if (component instanceof JTextField) {
-//				components.add(new JTextField(10));
-//			} else if (component instanceof JComboBox) {
+		ArrayList enumList = new ArrayList();
+		for (Object component : _components) {
+			enumList.clear();
+			if (component instanceof JTextField) {
+				components.add(new JTextField(10));
+			} else if (component instanceof JComboBox) {
 //				JComboBox cbBox = new JComboBox();
 //				switch (colNames[i + 1].toString()) {
 //				case "Builder":
@@ -68,9 +68,9 @@ public class InsertFrame extends JFrame {
 //				for (Object item : enumList)
 //					cbBox.addItem(item);
 //				components.add(cbBox);
-//			}
-//			i++;
-//		}
+			}
+			i++;
+		}
 
 		btnOK = new JButton("확인");
 		
@@ -78,38 +78,37 @@ public class InsertFrame extends JFrame {
 		btnOK.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-//				// TODO Auto-generated method stub
+				// TODO Auto-generated method stub
 //				try {
 //					Double.parseDouble(((JTextField) components.get(1)).getText());
 //				} catch (NumberFormatException exception) {
 //					JOptionPane.showMessageDialog(null, "올바른 정보를 입력하시오.");
 //				}
-//				Map properties = new LinkedHashMap();
-//				for (int i = 0; i < components.size() - 2; i++) {
-//					Object component = components.get(i + 2);
-//					if (component instanceof JTextField)
-//						properties.put(colNames[i + 3],
-//							((JTextField) component).getText());
-//					else if (component instanceof JComboBox)
-//						properties.put(colNames[i + 3],
-//							((JComboBox) component).getSelectedItem());
-//				}
+				Map properties = new LinkedHashMap();
+				System.out.println("compoents size = " + components.size());
+				for (int i = 0; i < components.size() - 1; i++) {
+					Object component = components.get(i + 1);
+					if (component instanceof JTextField)
+						properties.put(colNames[i + 2],
+							((JTextField) component).getText());
+					else if (component instanceof JComboBox)
+						properties.put(colNames[i + 2],
+							((JComboBox) component).getSelectedItem());
+					System.out.println(i);
+				}
 //				properties.put("instrumentType", instrumentType);
-//				BookProperties spec = new BookProperties(properties);
-//				Book instrument = 
-//						new Book(((JTextField) components.get(0)).getText(),
-//						Double.parseDouble(((JTextField) components.get(1)).
-//						getText()), spec);
-//
-//				if (dbController.insertInstrument(instrument)) {
-//					if (!instrumentPanel.isSearching())
-//						instrumentPanel.updateTable(null);
-//					setVisible(false);
-//					dispose();
-//				} else
-//					JOptionPane.showMessageDialog(null, 
-//						"SerialNumber가 중복되지 않게 입력하시오.");
-				
+				BookProperties spec = new BookProperties(properties);
+				Book book = 
+						new Book(Integer.parseInt(((JTextField) components.get(0)).getText()), spec);
+
+				if (dbController.insertBook(book)) {
+					if (!instrumentPanel.isSearching())
+						instrumentPanel.updateTable(null);
+					setVisible(false);
+					dispose();
+				} else
+					JOptionPane.showMessageDialog(null, 
+						"SerialNumber가 중복되지 않게 입력하시오.");
 			}
 		});
 

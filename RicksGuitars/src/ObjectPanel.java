@@ -175,8 +175,7 @@ public class ObjectPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-//				InsertFrame insertFrame = new InsertFrame("악기 추가", instance, dbController, (ArrayList) components,
-//						instrumentType);
+				InsertFrame insertFrame = new InsertFrame("책 추가", instance, dbController, (ArrayList) components);
 			}
 		});
 
