@@ -1,3 +1,7 @@
+/* 파일 : Inventory.java				*
+ * 과목명 : 소프트웨어개발프로세스			*
+ * 서술 : 현재 저장되어 있는 악기들을 관리해주는 클래스	*/
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -11,12 +15,12 @@ public class Inventory {
 		inventory = new LinkedList();
 	}
 
-	public void addInstrument(String serialNumber, double price, InstrumentSpec spec) {
-		Instrument instrument = new Instrument(serialNumber, price, spec);
-		inventory.add(instrument);
+	public void addInstrument(int id, BookProperties spec) {
+		Book book = new Book(id, spec);
+		inventory.add(book);
 	}
 
-	public void addInstrument(Instrument instrument) {
+	public void addInstrument(Book instrument) {
 		inventory.add(instrument);
 	}
 
@@ -24,14 +28,14 @@ public class Inventory {
 		inventory.remove(row);
 	}
 
-	public Instrument get(int row) {
-		return (Instrument) inventory.get(row);
+	public Book getByRow(int row) {
+		return (Book) inventory.get(row);
 	}
 
-	public Instrument get(String serialNumber) {
+	public Book get(int id) {
 		for (Iterator i = inventory.iterator(); i.hasNext();) {
-			Instrument instrument = (Instrument) i.next();
-			if (instrument.getSerialNumber().equals(serialNumber)) {
+			Book instrument = (Book) i.next();
+			if (instrument.getSerialNumber() == id) {
 				return instrument;
 			}
 		}
@@ -42,10 +46,10 @@ public class Inventory {
 		return inventory.size();
 	}
 
-	public ArrayList<Instrument> search(InstrumentSpec searchSpec) {
-		ArrayList<Instrument> matchingInstruments = new ArrayList<Instrument>();
+	public ArrayList<Book> search(BookProperties searchSpec) {
+		ArrayList<Book> matchingInstruments = new ArrayList<Book>();
 		for (Iterator i = inventory.iterator(); i.hasNext();) {
-			Instrument instrument = (Instrument) i.next();
+			Book instrument = (Book) i.next();
 			if (instrument.getSpec().matches(searchSpec))
 				matchingInstruments.add(instrument);
 		}

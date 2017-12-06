@@ -1,6 +1,6 @@
-/* ���� : DatabaseController.java			 *
- * ����� : ����Ʈ��������μ���			 		 *
- * ���� : �����ͺ��̽��� �̿��� ������� ��� �������ִ� Ŭ����*/
+/* 파일 : DatabaseController.java			 *
+ * 과목명 : 소프트웨어개발프로세스			 *
+ * 서술 : 데이터베이스를 이용한 연산들을 모두 관리해주는 클래스*/
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -14,7 +14,7 @@ public class DatabaseController {
 	private Connection connection;
 	private String[] columnNames;
 
-	/********************** �����ͺ��̽� ���� �ڵ� ****************************/
+	/********************** 데이터베이스 연동 코드 ****************************/
 	public void connectSQL() {
 		connection = null;
 
@@ -26,7 +26,8 @@ public class DatabaseController {
 		}
 
 //		String url = "jdbc:mysql://182.230.171.118:3306/ricksguitarsdb?autoReconnect=true&useSSL=false";
-		String url = "jdbc:mysql://localhost:3306/ricksguitarsdb";
+//		String url = "jdbc:mysql://localhost:3306/ricksguitarsdb";
+		String url = "jdbc:mysql://localhost:3306/bookstoredb";
 		String user = "root";
 		String password = "root";
 
@@ -38,71 +39,71 @@ public class DatabaseController {
 		}
 	}
 	
-	/********************** �����ͺ��̽��� �Ǳ� �߰� ****************************/
-	public boolean insertInstrument(Instrument newInstrument) {
-		Statement statement = null;
-		String sql = "insert ignore into " + newInstrument.getSpec().getProperty("instrumentType").toString()
-				+ " values(";
-
-		sql += "'" + newInstrument.getSerialNumber() + "'";
-		sql += ", '" + newInstrument.getPrice() + "'";
-
-		ArrayList specList = new ArrayList(newInstrument.getSpec().getProperties().values());
-		for (int i = 0; i < specList.size() - 1; i++) {
-			if (specList.get(i).toString().contains("'"))
-				specList.set(i, specList.get(i).toString().replaceAll("'", "''"));
-			sql += ", '" + specList.get(i).toString() + "'";
-		}
-
-		sql += ")";
-
-		try {
-			statement = (Statement) connection.createStatement();
-			int n = statement.executeUpdate(sql);
-			if (n > 0) {
-				System.out.println("악기 추가 성공");
-				return true;
-			} else {
-				System.out.println("악기 추가 실패");
-				return false;
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	/********************** 데이터베이스에 책 추가 ****************************/
+	public boolean insertInstrument(Book newInstrument) {
+//		Statement statement = null;
+//		String sql = "insert ignore into " + newInstrument.getSpec().getProperty("instrumentType").toString()
+//				+ " values(";
+//
+//		sql += "'" + newInstrument.getSerialNumber() + "'";
+//		sql += ", '" + newInstrument.getPrice() + "'";
+//
+//		ArrayList specList = new ArrayList(newInstrument.getSpec().getProperties().values());
+//		for (int i = 0; i < specList.size() - 1; i++) {
+//			if (specList.get(i).toString().contains("'"))
+//				specList.set(i, specList.get(i).toString().replaceAll("'", "''"));
+//			sql += ", '" + specList.get(i).toString() + "'";
+//		}
+//
+//		sql += ")";
+//
+//		try {
+//			statement = (Statement) connection.createStatement();
+//			int n = statement.executeUpdate(sql);
+//			if (n > 0) {
+//				System.out.println("악기 추가 성공");
+//				return true;
+//			} else {
+//				System.out.println("악기 추가 실패");
+//				return false;
+//			}
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		return false;
 	}
 
-	/********************** �����ͺ��̽����� �Ǳ� ���� ****************************/
-	public boolean deleteInstrument(Instrument oldInstrument) {
-		Statement statement = null;
-		String sql = "delete from " + oldInstrument.getSpec().getProperty("instrumentType").toString()
-				+ " where SerialNumber = '" + oldInstrument.getSerialNumber().toString() + "';";
-		try {
-			statement = (Statement) connection.createStatement();
-			int n = statement.executeUpdate(sql);
-			if (n > 0) {
-				System.out.println("악기 제거 성공");
-				return true;
-			} else {
-				System.out.println("악기 제거 실패");
-				return false;
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	/********************** 데이터베이스에서 책 제거 ****************************/
+	public boolean deleteInstrument(Book oldInstrument) {
+//		Statement statement = null;
+//		String sql = "delete from " + oldInstrument.getSpec().getProperty("instrumentType").toString()
+//				+ " where SerialNumber = '" + oldInstrument.getSerialNumber().toString() + "';";
+//		try {
+//			statement = (Statement) connection.createStatement();
+//			int n = statement.executeUpdate(sql);
+//			if (n > 0) {
+//				System.out.println("악기 제거 성공");
+//				return true;
+//			} else {
+//				System.out.println("악기 제거 실패");
+//				return false;
+//			}
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		return false;
 	}
 
 
 
-	/********************** �����ͺ��̽��� �ִ� ��� �Ǳ� �ҷ����� ****************************/
-	public Object[][] getInstruments(InstrumentType instrumentType) {
+	/********************** 데이터베이스에 있는 모든 책 불러오기 ****************************/
+	public Object[][] getInstruments() {
 		Statement statement = null;
 		ResultSet resultSet = null;
 		int colCount = 0, rowCount = 0;
-		String sql = "select * from " + instrumentType.toString();
+		String sql = "select * from book";
 		Object[][] datas = null;
 
 		try {
@@ -134,33 +135,33 @@ public class DatabaseController {
 		return datas;
 	}
 
-	/********************** �����ͺ��̽��� �ִ� ������ ���� ****************************/
-	public void updateData(Instrument instrument) {
-		Statement statement = null;
-		ArrayList<String> specList = new ArrayList<String>(instrument.getSpec().getProperties().keySet());
-		specList.remove("instrumentType");
-
-		String sql = "update " + instrument.getSpec().getProperty("instrumentType").toString() + " set Price='"
-				+ instrument.getPrice() + "'";
-		for (String spec : specList) {
-			if (instrument.getSpec().getProperty(spec).toString().contains("'"))
-				instrument.getSpec().getProperties().put(spec,
-					instrument.getSpec().getProperty(spec).toString().replaceAll("'", "''"));
-			sql += ", " + spec + "='" + instrument.getSpec().getProperty(spec) + "'";
-		}
-
-		sql += " where SerialNumber='" + instrument.getSerialNumber() + "';";
-		try {
-			statement = (Statement) connection.createStatement();
-			statement.executeUpdate(sql);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	/********************** 데이터베이스에 있는 데이터 수정 ****************************/
+	public void updateData(Book instrument) {
+//		Statement statement = null;
+//		ArrayList<String> specList = new ArrayList<String>(instrument.getSpec().getProperties().keySet());
+//		specList.remove("instrumentType");
+//
+//		String sql = "update " + instrument.getSpec().getProperty("instrumentType").toString() + " set Price='"
+//				+ instrument.getPrice() + "'";
+//		for (String spec : specList) {
+//			if (instrument.getSpec().getProperty(spec).toString().contains("'"))
+//				instrument.getSpec().getProperties().put(spec,
+//					instrument.getSpec().getProperty(spec).toString().replaceAll("'", "''"));
+//			sql += ", " + spec + "='" + instrument.getSpec().getProperty(spec) + "'";
+//		}
+//
+//		sql += " where SerialNumber='" + instrument.getSerialNumber() + "';";
+//		try {
+//			statement = (Statement) connection.createStatement();
+//			statement.executeUpdate(sql);
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
 	}
 
-	/********************** ���̺��� �÷��� �������� ****************************/
+	/********************** 테이블의 컬럼명 가져오기 ****************************/
 	public String[] getColumnNames() {
 		return columnNames;
 	}

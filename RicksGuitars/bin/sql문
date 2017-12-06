@@ -1,0 +1,15 @@
+create database bookstoredb;
+
+use bookstoredb;
+
+create table book (
+	id INT auto_increment,
+    title varchar(20),
+    publisher varchar(10),
+    author varchar(10),
+    checkout bool,
+    primary key(id)
+);
+
+insert into book(title, publisher, author, checkout)
+	values("객체지향 시스템개론", "헤헤출판사", "짱승", FALSE);

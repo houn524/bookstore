@@ -1,16 +1,16 @@
-/* ÆÄÀÏ : InstrumentSpec.java			*
- * °ú¸ñ¸í : ¼ÒÇÁÆ®¿ş¾î°³¹ßÇÁ·Î¼¼½º				*
- * ¼­¼ú : ¾Ç±âÀÇ »ó¼¼ÇÑ ¼Ó¼ºµéÀ» ´ã´Â Å¬·¡½º		*/
+/* íŒŒì¼ : InstrumentSpec.java				*
+ * ê³¼ëª©ëª… : ì†Œí”„íŠ¸ì›¨ì–´ê°œë°œí”„ë¡œì„¸ìŠ¤			*
+ * ì„œìˆ  : ì•…ê¸°ì˜ ìƒì„¸í•œ ì†ì„±ë“¤ì„ ë‹´ëŠ” í´ë˜ìŠ¤		*/
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class InstrumentSpec {
+public class BookProperties {
 
 	private LinkedHashMap properties;
 
-	public InstrumentSpec(Map properties) {
+	public BookProperties(Map properties) {
 		if (properties == null) {
 			this.properties = new LinkedHashMap();
 		} else {
@@ -26,7 +26,7 @@ public class InstrumentSpec {
 		return properties;
 	}
 
-	public boolean matches(InstrumentSpec otherSpec) {
+	public boolean matches(BookProperties otherSpec) {
 		for (Iterator i = otherSpec.getProperties().keySet().iterator(); i.hasNext();) {
 			String propertyName = (String) i.next();
 			if (otherSpec.getProperty(propertyName).equals(""))

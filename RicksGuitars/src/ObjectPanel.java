@@ -1,9 +1,9 @@
-/* ���� : InstrumentPanel.java					*
- * ����� : ����Ʈ��������μ���							*
- * ���� : ��� �ǱⰡ ���������� ������ �ִ� �Ӽ����� ǥ���� �� �ִ�		*
- * 		������Ʈ���� �����ϰ� �߰������ִ� Ŭ����				*
- * 		�� Ŭ������ GuitarPanel�� MandolinPanel Ŭ������	*
- * 		��� �޴´�.									*/
+/* 파일 : InstrumentPanel.java					*
+ * 과목명 : 소프트웨어개발프로세스					*
+ * 서술 : 모든 악기가 공통적으로 가지고 있는 속성들을 표현할 수 있는		*
+ * 		컴포넌트들을 생성하고 추가시켜주는 클래스			*
+ * 		이 클래스를 GuitarPanel과 MandolinPanel 클래스가	  	*
+ * 		상속 받는다.					*/
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -36,7 +36,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 
-public class InstrumentPanel extends JPanel {
+public class ObjectPanel extends JPanel {
 
 	private Object[][] data;
 	private DefaultTableModel defaultTableModel;
@@ -46,15 +46,15 @@ public class InstrumentPanel extends JPanel {
 	private JCheckBox chkBox;
 	private int selectedRow;
 	private Inventory inventory, defaultInventory;
-	private InstrumentType instrumentType;
+	private String instrumentType;
 	private DatabaseController dbController;
-	private InstrumentPanel instance;
+	private ObjectPanel instance;
 	private boolean isSearching = false;
-	private InstrumentSpec searchingSpec;
+	private BookProperties searchingSpec;
 	protected JPanel editSpecPane;
 	protected List components;
 
-	public InstrumentPanel(InstrumentType instrumentType) {
+	public ObjectPanel(String instrumentType) {
 		this.instrumentType = instrumentType;
 		instance = this;
 
@@ -77,7 +77,7 @@ public class InstrumentPanel extends JPanel {
 		};
 		celAlign.setHorizontalAlignment(JLabel.CENTER);
 
-		/********************** üũ�ڽ� ���� ****************************/
+		/********************** 체크박스 설정 ****************************/
 		chkBox = new JCheckBox();
 		chkBox.setHorizontalAlignment(JLabel.CENTER);
 		chkBox.addActionListener(new ActionListener() {
@@ -101,35 +101,36 @@ public class InstrumentPanel extends JPanel {
 		scroll.setBorder(border);
 		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
-		/********************** �ؽ�Ʈ�ʵ� ���� ****************************/
+		/********************** 텍스트필드 설정 ****************************/
 		JTextField txtSerialNumber = new JTextField(10);
 		txtSerialNumber.setEditable(false);
-		JTextField txtPrice = new JTextField(10);
-		JTextField txtModel = new JTextField(10);
+		JTextField txtTitle = new JTextField(10);
+		JTextField txtPublisher = new JTextField(10);
+		JTextField txtAuthor = new JTextField(10);
 		// txtNumStrings = new JTextField(10);
 
-		/********************** �޺��ڽ� ���� ****************************/
-		JComboBox cbBuilder = new JComboBox();
-		cbBuilder.setEditable(true);
-		for (Builder builder : Builder.values())
-			cbBuilder.addItem(builder.toString());
+//		/********************** 콤보박스 설정 ****************************/
+//		JComboBox cbBuilder = new JComboBox();
+//		cbBuilder.setEditable(true);
+//		for (Builder builder : Builder.values())
+//			cbBuilder.addItem(builder.toString());
+//
+//		JComboBox cbType = new JComboBox();
+//		cbType.setEditable(true);
+//		for (GuitarType guitarType : GuitarType.values())
+//			cbType.addItem(guitarType.toString());
+//
+//		JComboBox cbBackWood = new JComboBox();
+//		cbBackWood.setEditable(true);
+//		JComboBox cbTopWood = new JComboBox();
+//		cbTopWood.setEditable(true);
+//		for (Wood wood : Wood.values()) {
+//			cbBackWood.addItem(wood.toString());
+//			cbTopWood.addItem(wood.toString());
+//		}
 
-		JComboBox cbType = new JComboBox();
-		cbType.setEditable(true);
-		for (GuitarType guitarType : GuitarType.values())
-			cbType.addItem(guitarType.toString());
 
-		JComboBox cbBackWood = new JComboBox();
-		cbBackWood.setEditable(true);
-		JComboBox cbTopWood = new JComboBox();
-		cbTopWood.setEditable(true);
-		for (Wood wood : Wood.values()) {
-			cbBackWood.addItem(wood.toString());
-			cbTopWood.addItem(wood.toString());
-		}
-
-
-		/********************** ��ư ���� ****************************/
+		/********************** 버튼 설정 ****************************/
 		JButton btnAllCheck = new JButton("전체선택");
 		btnAllCheck.addActionListener(new ActionListener() {
 			@Override
@@ -159,7 +160,7 @@ public class InstrumentPanel extends JPanel {
 				for (int i = 0; i < defaultTableModel.getRowCount(); i++) {
 					if ((boolean) defaultTableModel.getValueAt(i, 0) == true) {
 						defaultTableModel.removeRow(i);
-						if(dbController.deleteInstrument(inventory.get(i))) {
+						if(dbController.deleteInstrument(inventory.getByRow(i))) {
 							clearSpecField();
 							inventory.removeInstrument(i);
 						}
@@ -174,8 +175,8 @@ public class InstrumentPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				InsertFrame insertFrame = new InsertFrame("악기 추가", instance, dbController, (ArrayList) components,
-						instrumentType);
+//				InsertFrame insertFrame = new InsertFrame("악기 추가", instance, dbController, (ArrayList) components,
+//						instrumentType);
 			}
 		});
 
@@ -197,21 +198,21 @@ public class InstrumentPanel extends JPanel {
 		btnEdit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				int row = table.getSelectedRow();
-				InstrumentSpec spec = getSpecField();
-
-				Instrument instrument = new Instrument(txtSerialNumber.getText(),
-						Double.parseDouble(txtPrice.getText()), spec);
-
-				dbController.updateData(instrument);
-
-				updateTable(null);
-
-				if (isSearching)
-					searchTable(searchingSpec);
-
-				clearSpecField();
+//				// TODO Auto-generated method stub
+//				int row = table.getSelectedRow();
+//				BookProperties spec = getSpecField();
+//
+//				Book instrument = new Book(txtSerialNumber.getText(),
+//						Double.parseDouble(txtPrice.getText()), spec);
+//
+//				dbController.updateData(instrument);
+//
+//				updateTable(null);
+//
+//				if (isSearching)
+//					searchTable(searchingSpec);
+//
+//				clearSpecField();
 			}
 		});
 
@@ -226,16 +227,17 @@ public class InstrumentPanel extends JPanel {
 			}
 		});
 
-		/********************** ������Ʈ�� ArrayList�� ���� ****************************/
+		/********************** 컴포넌트를 ArrayList로 관리 ****************************/
 		components.add(txtSerialNumber);
-		components.add(txtPrice);
-		components.add(cbBuilder);
-		components.add(txtModel);
-		components.add(cbType);
-		components.add(cbTopWood);
-		components.add(cbBackWood);
+		components.add(txtTitle);
+//		components.add(cbBuilder);
+		components.add(txtPublisher);
+		components.add(txtAuthor);
+//		components.add(cbType);
+//		components.add(cbTopWood);
+//		components.add(cbBackWood);
 
-		/********************** �г� ���� ****************************/
+		/********************** 패널 설정 ****************************/
 		JPanel invenButtonPane = new JPanel();
 		invenButtonPane.setLayout(new FlowLayout());
 		invenButtonPane.add(btnAllCheck);
@@ -256,10 +258,10 @@ public class InstrumentPanel extends JPanel {
 		editButtonPane.add(btnEdit);
 
 		editSpecPane = new JPanel();
-		GridLayout gridLayout = new GridLayout(title.length + 3, 2, 0, 10);
+		GridLayout gridLayout = new GridLayout(title.length + 7, 2, 0, 10);
 		editSpecPane.setLayout(gridLayout);
 
-		/********************** �гο� ������Ʈ �߰� ****************************/
+		/********************** 패널에 컴포넌트 추가 ****************************/
 		int i = 1;
 		for (Object component : components) {
 			editSpecPane.add(new JLabel((title[i].toString() + " : "), Label.LEFT));
@@ -281,11 +283,11 @@ public class InstrumentPanel extends JPanel {
 		add(editPane, BorderLayout.EAST);
 	}
 
-	/********************** �����ͺ��̽����� �����͵��� �а� ���̺� �ѷ��� ****************************/
-	public void updateTable(ArrayList<Instrument> searchResult) {
+	/********************** 데이터베이스에서 데이터들을 읽고 테이블에 뿌려줌 ****************************/
+	public void updateTable(ArrayList<Book> searchResult) {
 		if (searchResult != null) {
 			inventory = new Inventory();
-			for (Instrument instrument : searchResult) {
+			for (Book instrument : searchResult) {
 				inventory.addInstrument(instrument);
 			}
 
@@ -298,7 +300,7 @@ public class InstrumentPanel extends JPanel {
 			}
 		} else {
 			inventory = new Inventory();
-			data = dbController.getInstruments(instrumentType);
+			data = dbController.getInstruments();
 			title = dbController.getColumnNames();
 
 			for (int i = 0; i < data.length; i++) {
@@ -306,12 +308,12 @@ public class InstrumentPanel extends JPanel {
 				for (int j = 3; j < title.length; j++)
 					properties.put(title[j], data[i][j]);
 				properties.put("instrumentType", instrumentType);
-				InstrumentSpec spec = new InstrumentSpec(properties);
-				inventory.addInstrument((String) data[i][1], Double.parseDouble((String) data[i][2]), spec);
+				BookProperties spec = new BookProperties(properties);
+				inventory.addInstrument(Integer.parseInt((String)data[i][1]), spec);
 			}
 		}
 
-		/********************** ���̺� ���� �Ұ� ****************************/
+		/********************** 테이블 수정 불가 ****************************/
 		defaultTableModel = new DefaultTableModel(data, title) {
 			public boolean isCellEditable(int i, int c) {
 				if (c != 0)
@@ -321,7 +323,7 @@ public class InstrumentPanel extends JPanel {
 			}
 		};
 
-		/********************** ���̺� ���� ****************************/
+		/********************** 테이블 설정 ****************************/
 		table.setModel(defaultTableModel);
 		table.getTableHeader().setReorderingAllowed(false);
 		table.getColumn("").setPreferredWidth(10);
@@ -358,17 +360,17 @@ public class InstrumentPanel extends JPanel {
 		}
 	}
 
-	/********************** �Ǳ� �Ӽ���� �˻� ****************************/
-	public void searchTable(InstrumentSpec spec) {
-		ArrayList<Instrument> searchResult;
+	/********************** 악기 속성들로 검색 ****************************/
+	public void searchTable(BookProperties spec) {
+		ArrayList<Book> searchResult;
 
 		searchResult = defaultInventory.search(spec);
 
 		updateTable(searchResult);
 	}
 
-	/************ ȭ�� �����ʿ� �ִ� �Ӽ����� �о InstrumentSpec ��ü�� ���� ************/
-	public InstrumentSpec getSpecField() {
+	/************ 화면 오른쪽에 있는 속성들을 읽어서 InstrumentSpec 객체로 생성 ************/
+	public BookProperties getSpecField() {
 		Map properties = new LinkedHashMap();
 		for (int i = 0; i < components.size() - 2; i++) {
 			Object component = components.get(i + 2);
@@ -380,11 +382,11 @@ public class InstrumentPanel extends JPanel {
 		}
 		properties.put("instrumentType", instrumentType);
 
-		InstrumentSpec spec = new InstrumentSpec(properties);
+		BookProperties spec = new BookProperties(properties);
 		return spec;
 	}
 
-	/********************** ȭ�� �����ʿ� �ִ� �Ӽ����� ����ֱ� ****************************/
+	/********************** 화면 오른쪽에 있는 속성들을 비워주기 ****************************/
 	private void clearSpecField() {
 		for (Object component : components) {
 			if (component instanceof JTextField)
@@ -394,7 +396,7 @@ public class InstrumentPanel extends JPanel {
 		}
 	}
 
-	/********************** �˻� ���� �� �Ǻ� ****************************/
+	/********************** 검색 중인 지 판별 ****************************/
 	public boolean isSearching() {
 		return isSearching;
 	}

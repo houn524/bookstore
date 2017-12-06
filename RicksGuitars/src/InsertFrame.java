@@ -1,6 +1,6 @@
-/* ���� : InsertFrame.java					*
- * ����� : ����Ʈ��������μ���				      	*
- * ���� : ���� ��ư�� ������ �� �Ӽ����� �Է��� �� �ִ� ������ ����	*/
+/* 파일 : InsertFrame.java					*
+ * 과목명 : 소프트웨어개발프로세스				*
+ * 서술 : 삽입 버튼을 눌렀을 시 속성들을 입력할 수 있는 프레임 생성	*/
 
 import java.awt.Component;
 import java.awt.FlowLayout;
@@ -24,91 +24,91 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-/********************** ���Թ�ư ������ �� �ߴ� ������ ****************************/
+/********************** 삽입버튼 눌렀을 때 뜨는 프레임 ****************************/
 public class InsertFrame extends JFrame {
 
 	private String[] colNames;
 	private JButton btnOK, btnCancel;
 	private DatabaseController dbController;
-	private GuitarPanel guitarPanel;
+	private BookPanel guitarPanel;
 	private List components;
 
-	public InsertFrame(String title, InstrumentPanel instrumentPanel, DatabaseController dbController,
-			ArrayList _components, InstrumentType instrumentType) {
+	public InsertFrame(String title, ObjectPanel instrumentPanel, DatabaseController dbController,
+			ArrayList _components, String instrumentType) {
 		this.dbController = dbController;
 		this.guitarPanel = guitarPanel;
 		this.components = new ArrayList();
 
 		colNames = dbController.getColumnNames();
 
-		/********************** ������ ���� ������Ʈ�� ���� ****************************/
+		/********************** 프레임 안의 컴포넌트들 설정 ****************************/
 		int i = 0;
-		ArrayList enumList = new ArrayList();
-		for (Object component : _components) {
-			enumList.clear();
-			if (component instanceof JTextField) {
-				components.add(new JTextField(10));
-			} else if (component instanceof JComboBox) {
-				JComboBox cbBox = new JComboBox();
-				switch (colNames[i + 1].toString()) {
-				case "Builder":
-					Collections.addAll(enumList, Builder.values());
-					break;
-				case "Type":
-					Collections.addAll(enumList, GuitarType.values());
-					break;
-				case "Style":
-					Collections.addAll(enumList, Style.values());
-					break;
-				case "TopWood":
-				case "BackWood":
-					Collections.addAll(enumList, Wood.values());
-					break;
-				}
-				for (Object item : enumList)
-					cbBox.addItem(item);
-				components.add(cbBox);
-			}
-			i++;
-		}
+//		ArrayList enumList = new ArrayList();
+//		for (Object component : _components) {
+//			enumList.clear();
+//			if (component instanceof JTextField) {
+//				components.add(new JTextField(10));
+//			} else if (component instanceof JComboBox) {
+//				JComboBox cbBox = new JComboBox();
+//				switch (colNames[i + 1].toString()) {
+//				case "Builder":
+//					Collections.addAll(enumList, Builder.values());
+//					break;
+//				case "Type":
+//					Collections.addAll(enumList, GuitarType.values());
+//					break;
+//				case "Style":
+//					Collections.addAll(enumList, Style.values());
+//					break;
+//				case "TopWood":
+//				case "BackWood":
+//					Collections.addAll(enumList, Wood.values());
+//					break;
+//				}
+//				for (Object item : enumList)
+//					cbBox.addItem(item);
+//				components.add(cbBox);
+//			}
+//			i++;
+//		}
 
 		btnOK = new JButton("확인");
 		
-		/********************** Ȯ�� ��ư ������ �� �����ͺ��̽��� �߰� ****************************/
+		/********************** 확인 버튼 눌렀을 시 데이터베이스에 추가 ****************************/
 		btnOK.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				try {
-					Double.parseDouble(((JTextField) components.get(1)).getText());
-				} catch (NumberFormatException exception) {
-					JOptionPane.showMessageDialog(null, "올바른 정보를 입력하시오.");
-				}
-				Map properties = new LinkedHashMap();
-				for (int i = 0; i < components.size() - 2; i++) {
-					Object component = components.get(i + 2);
-					if (component instanceof JTextField)
-						properties.put(colNames[i + 3],
-							((JTextField) component).getText());
-					else if (component instanceof JComboBox)
-						properties.put(colNames[i + 3],
-							((JComboBox) component).getSelectedItem());
-				}
-				properties.put("instrumentType", instrumentType);
-				InstrumentSpec spec = new InstrumentSpec(properties);
-				Instrument instrument = 
-						new Instrument(((JTextField) components.get(0)).getText(),
-						Double.parseDouble(((JTextField) components.get(1)).
-						getText()), spec);
-
-				if (dbController.insertInstrument(instrument)) {
-					if (!instrumentPanel.isSearching())
-						instrumentPanel.updateTable(null);
-					setVisible(false);
-					dispose();
-				} else
-					JOptionPane.showMessageDialog(null, 
-						"SerialNumber가 중복되지 않게 입력하시오.");
+//				// TODO Auto-generated method stub
+//				try {
+//					Double.parseDouble(((JTextField) components.get(1)).getText());
+//				} catch (NumberFormatException exception) {
+//					JOptionPane.showMessageDialog(null, "올바른 정보를 입력하시오.");
+//				}
+//				Map properties = new LinkedHashMap();
+//				for (int i = 0; i < components.size() - 2; i++) {
+//					Object component = components.get(i + 2);
+//					if (component instanceof JTextField)
+//						properties.put(colNames[i + 3],
+//							((JTextField) component).getText());
+//					else if (component instanceof JComboBox)
+//						properties.put(colNames[i + 3],
+//							((JComboBox) component).getSelectedItem());
+//				}
+//				properties.put("instrumentType", instrumentType);
+//				BookProperties spec = new BookProperties(properties);
+//				Book instrument = 
+//						new Book(((JTextField) components.get(0)).getText(),
+//						Double.parseDouble(((JTextField) components.get(1)).
+//						getText()), spec);
+//
+//				if (dbController.insertInstrument(instrument)) {
+//					if (!instrumentPanel.isSearching())
+//						instrumentPanel.updateTable(null);
+//					setVisible(false);
+//					dispose();
+//				} else
+//					JOptionPane.showMessageDialog(null, 
+//						"SerialNumber가 중복되지 않게 입력하시오.");
 				
 			}
 		});
@@ -126,7 +126,7 @@ public class InsertFrame extends JFrame {
 		GridLayout gridLayout = new GridLayout(colNames.length, 2, 10, 10);
 		setLayout(gridLayout);
 
-		/********************** �гο� ������Ʈ �߰� ****************************/
+		/********************** 패널에 컴포넌트 추가 ****************************/
 		i = 1;
 		for (Object component : components) {
 			add(new JLabel((colNames[i].toString() + " : "), Label.LEFT));
