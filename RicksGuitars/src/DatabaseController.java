@@ -43,13 +43,7 @@ public class DatabaseController {
 	/********************** 데이터베이스에 책 추가 ****************************/
 	public boolean insertBook(Book book) {
 		Statement statement = null;
-//		String sql = "insert ignore into book(id, title, publisher, author)"
-//				+ " values(";
-//
-//		sql += "'" + book.getSerialNumber() + "'";
 
-		
-		
 		ArrayList specList = new ArrayList(book.getSpec().getProperties().values());
 		String sql = "insert ignore into book(id, title, publisher, author) values(?, ?, ?, ?)";
 	    PreparedStatement pstmt;
@@ -74,31 +68,6 @@ public class DatabaseController {
 			e1.printStackTrace();
 		}
 		
-		
-		
-//		for (int i = 0; i < specList.size(); i++) {
-//			if (specList.get(i).toString().contains("'"))
-//				specList.set(i, specList.get(i).toString().replaceAll("'", "''"));
-//			sql += ", '" + specList.get(i).toString() + "'";
-//		}
-
-//		sql += ")";
-		
-
-//		try {
-//			statement = (Statement) connection.createStatement();
-//			int n = statement.executeUpdate(sql);
-//			if (n > 0) {
-//				System.out.println("책 추가 성공");
-//				return true;
-//			} else {
-//				System.out.println("책 추가 실패");
-//				return false;
-//			}
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 		return false;
 	}
 

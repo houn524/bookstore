@@ -7,7 +7,7 @@ create table book (
     title varchar(20),
     publisher varchar(10),
     author varchar(10),
-    checkout bool,
+    checkout bool default false,
     primary key(id)
 );
 
