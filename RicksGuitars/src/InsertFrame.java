@@ -94,7 +94,6 @@ public class InsertFrame extends JFrame {
 					else if (component instanceof JComboBox)
 						properties.put(colNames[i + 2],
 							((JComboBox) component).getSelectedItem());
-					System.out.println(i);
 				}
 //				properties.put("instrumentType", instrumentType);
 				BookProperties spec = new BookProperties(properties);

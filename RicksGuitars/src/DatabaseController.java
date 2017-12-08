@@ -72,8 +72,27 @@ public class DatabaseController {
 	}
 
 	/********************** 데이터베이스에서 책 제거 ****************************/
-	public boolean deleteInstrument(Book oldInstrument) {
-//		Statement statement = null;
+	public boolean deleteInstrument(Book oldBook) {
+		Statement statement = null;
+		String sql = "delete from book where id=?";
+	    PreparedStatement pstmt;
+	    try {
+			pstmt = connection.prepareStatement(sql);
+			pstmt.setString(1, String.valueOf(oldBook.getSerialNumber()));
+			
+			int n = pstmt.executeUpdate();
+			
+			if (n > 0) {
+				System.out.println("책 제거 성공");
+				return true;
+			} else {
+				System.out.println("책 제거 실패");
+				return false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //		String sql = "delete from " + oldInstrument.getSpec().getProperty("instrumentType").toString()
 //				+ " where SerialNumber = '" + oldInstrument.getSerialNumber().toString() + "';";
 //		try {
@@ -113,9 +132,14 @@ public class DatabaseController {
 
 			this.columnNames = new String[colCount];
 			columnNames[0] = "";
-			for (int i = 1; i < colCount; i++) {
-				this.columnNames[i] = resultSet.getMetaData().getColumnName(i);
-			}
+			columnNames[1] = "일련번호";
+			columnNames[2] = "제목";
+			columnNames[3] = "출판사";
+			columnNames[4] = "저자";
+			columnNames[5] = "대출";
+//			for (int i = 1; i < colCount; i++) {
+//				this.columnNames[i] = resultSet.getMetaData().getColumnName(i);
+//			}
 
 			datas = new Object[rowCount][colCount];
 			for (int i = 0; i < rowCount; i++) {
@@ -133,11 +157,25 @@ public class DatabaseController {
 	}
 
 	/********************** 데이터베이스에 있는 데이터 수정 ****************************/
-	public void updateData(Book instrument) {
-//		Statement statement = null;
-//		ArrayList<String> specList = new ArrayList<String>(instrument.getSpec().getProperties().keySet());
+	public void updateData(Book book) {
+		Statement statement = null;
+		ArrayList<String> specList = new ArrayList<String>(book.getSpec().getProperties().keySet());
 //		specList.remove("instrumentType");
 //
+		PreparedStatement pstmt;
+		String sql = "update book set title=?, publisher=?, author=? where id=?";
+		try {
+			pstmt = connection.prepareStatement(sql);
+			pstmt.setString(1, book.getSpec().getProperty("제목").toString());
+			pstmt.setString(2, book.getSpec().getProperty("출판사").toString());
+			pstmt.setString(3, book.getSpec().getProperty("저자").toString());
+			pstmt.setString(4, String.valueOf(book.getSerialNumber()));
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 //		String sql = "update " + instrument.getSpec().getProperty("instrumentType").toString() + " set Price='"
 //				+ instrument.getPrice() + "'";
 //		for (String spec : specList) {

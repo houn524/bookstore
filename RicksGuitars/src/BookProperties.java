@@ -29,9 +29,14 @@ public class BookProperties {
 	public boolean matches(BookProperties otherSpec) {
 		for (Iterator i = otherSpec.getProperties().keySet().iterator(); i.hasNext();) {
 			String propertyName = (String) i.next();
-			if (otherSpec.getProperty(propertyName).equals(""))
+			System.out.println(propertyName);
+			if (otherSpec.getProperty(propertyName).equals("")) {
+				System.out.println("공백");
 				continue;
+			}
+				
 			if (!properties.get(propertyName).equals(otherSpec.getProperty(propertyName))) {
+				System.out.println("false");
 				return false;
 			}
 		}

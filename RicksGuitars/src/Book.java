@@ -32,6 +32,7 @@ public class Book {
 
 		for (int i = 0; i < spec.getProperties().size(); i++) {
 			data[i + 2] = specList.get(i);
+			System.out.println("spec : " + specList.get(i));
 		}
 		return data;
 	}

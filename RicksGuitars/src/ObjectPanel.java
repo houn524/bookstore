@@ -186,6 +186,7 @@ public class ObjectPanel extends JPanel {
 				// TODO Auto-generated method stub
 				if(!isSearching)
 					defaultInventory = inventory;
+				
 				searchingSpec = getSpecField();
 				searchTable(searchingSpec);
 				isSearching = true;
@@ -197,21 +198,20 @@ public class ObjectPanel extends JPanel {
 		btnEdit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-//				// TODO Auto-generated method stub
-//				int row = table.getSelectedRow();
-//				BookProperties spec = getSpecField();
-//
-//				Book instrument = new Book(txtSerialNumber.getText(),
-//						Double.parseDouble(txtPrice.getText()), spec);
-//
-//				dbController.updateData(instrument);
-//
-//				updateTable(null);
-//
-//				if (isSearching)
-//					searchTable(searchingSpec);
-//
-//				clearSpecField();
+				// TODO Auto-generated method stub
+				int row = table.getSelectedRow();
+				BookProperties spec = getSpecField();
+
+				Book book = new Book(Integer.parseInt(txtSerialNumber.getText()), spec);
+
+				dbController.updateData(book);
+
+				updateTable(null);
+
+				if (isSearching)
+					searchTable(searchingSpec);
+
+				clearSpecField();
 			}
 		});
 
@@ -304,12 +304,13 @@ public class ObjectPanel extends JPanel {
 
 			for (int i = 0; i < data.length; i++) {
 				Map properties = new LinkedHashMap();
-				for (int j = 3; j < title.length; j++)
+				for (int j = 2; j < title.length; j++) {
 					properties.put(title[j], data[i][j]);
-				properties.put("instrumentType", instrumentType);
+				}
+					
 				BookProperties spec = new BookProperties(properties);
 				inventory.addBook(Integer.parseInt((String)data[i][1]), spec);
-			}
+			}			
 		}
 
 		/********************** 테이블 수정 불가 ****************************/
@@ -341,6 +342,8 @@ public class ObjectPanel extends JPanel {
 							if (component instanceof JTextField) {
 								if (defaultTableModel.getValueAt(row, i) instanceof Double)					
 									((JTextField) component).setText(String.valueOf(defaultTableModel.getValueAt(row, i)));
+								else if(defaultTableModel.getValueAt(row, i) instanceof Integer)
+									((JTextField) component).setText(String.valueOf(defaultTableModel.getValueAt(row, i)));
 								else
 									((JTextField) component).setText((String) defaultTableModel.getValueAt(row, i));
 							} else if (component instanceof JComboBox)
@@ -371,15 +374,18 @@ public class ObjectPanel extends JPanel {
 	/************ 화면 오른쪽에 있는 속성들을 읽어서 InstrumentSpec 객체로 생성 ************/
 	public BookProperties getSpecField() {
 		Map properties = new LinkedHashMap();
-		for (int i = 0; i < components.size() - 2; i++) {
-			Object component = components.get(i + 2);
+		for (int i = 0; i < components.size() - 1; i++) {
+			Object component = components.get(i + 1);
+			System.out.println("getSpecField : " + title[i + 2] + " : " + ((JTextField)component).getText());
 			if (component instanceof JComboBox)
-				properties.put(title[i + 3], ((JComboBox) component).getSelectedItem());
-			else if (component instanceof JTextField)
-				properties.put(title[i + 3], ((JTextField) component).getText());
+				properties.put(title[i + 2], ((JComboBox) component).getSelectedItem());
+			else if (component instanceof JTextField) {
+				properties.put(title[i + 2], ((JTextField) component).getText());
+			}
 
 		}
-		properties.put("instrumentType", instrumentType);
+//		properties.put("instrumentType", instrumentType);
+//		properties.put("대출", 0);
 
 		BookProperties spec = new BookProperties(properties);
 		return spec;

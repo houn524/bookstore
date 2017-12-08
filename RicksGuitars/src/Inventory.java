@@ -55,4 +55,12 @@ public class Inventory {
 		}
 		return matchingBooks;
 	}
+	
+	public void printAll() {
+		for(Iterator i = inventory.iterator(); i.hasNext();) {
+			Book book = (Book) i.next();
+			System.out.println(book.getSerialNumber());
+			System.out.println(book.getSpec().getProperty("제목"));
+		}
+	}
 }
