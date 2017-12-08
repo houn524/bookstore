@@ -95,7 +95,7 @@ public class ObjectPanel extends JPanel {
 
 		updateTable(null);
 
-		Border border = BorderFactory.createTitledBorder("악기 재고");
+		Border border = BorderFactory.createTitledBorder("책 재고");
 
 		JScrollPane scroll = new JScrollPane(table);
 		scroll.setBorder(border);
@@ -162,7 +162,7 @@ public class ObjectPanel extends JPanel {
 						defaultTableModel.removeRow(i);
 						if(dbController.deleteInstrument(inventory.getByRow(i))) {
 							clearSpecField();
-							inventory.removeInstrument(i);
+							inventory.removeBook(i);
 						}
 						i--;
 					}
@@ -269,7 +269,7 @@ public class ObjectPanel extends JPanel {
 		}
 
 		Border specBorder;
-		specBorder = BorderFactory.createTitledBorder("악기 속성");
+		specBorder = BorderFactory.createTitledBorder("책 속성");
 		editSpecPane.setBorder(specBorder);
 
 		BoxLayout boxLayout = new BoxLayout(editPane, BoxLayout.Y_AXIS);
@@ -287,7 +287,7 @@ public class ObjectPanel extends JPanel {
 		if (searchResult != null) {
 			inventory = new Inventory();
 			for (Book instrument : searchResult) {
-				inventory.addInstrument(instrument);
+				inventory.addBook(instrument);
 			}
 
 			data = null;
@@ -308,7 +308,7 @@ public class ObjectPanel extends JPanel {
 					properties.put(title[j], data[i][j]);
 				properties.put("instrumentType", instrumentType);
 				BookProperties spec = new BookProperties(properties);
-				inventory.addInstrument(Integer.parseInt((String)data[i][1]), spec);
+				inventory.addBook(Integer.parseInt((String)data[i][1]), spec);
 			}
 		}
 

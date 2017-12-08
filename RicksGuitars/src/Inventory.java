@@ -15,16 +15,16 @@ public class Inventory {
 		inventory = new LinkedList();
 	}
 
-	public void addInstrument(int id, BookProperties spec) {
+	public void addBook(int id, BookProperties spec) {
 		Book book = new Book(id, spec);
 		inventory.add(book);
 	}
 
-	public void addInstrument(Book instrument) {
-		inventory.add(instrument);
+	public void addBook(Book book) {
+		inventory.add(book);
 	}
 
-	public void removeInstrument(int row) {
+	public void removeBook(int row) {
 		inventory.remove(row);
 	}
 
@@ -34,9 +34,9 @@ public class Inventory {
 
 	public Book get(int id) {
 		for (Iterator i = inventory.iterator(); i.hasNext();) {
-			Book instrument = (Book) i.next();
-			if (instrument.getSerialNumber() == id) {
-				return instrument;
+			Book book = (Book) i.next();
+			if (book.getSerialNumber() == id) {
+				return book;
 			}
 		}
 		return null;
@@ -47,12 +47,12 @@ public class Inventory {
 	}
 
 	public ArrayList<Book> search(BookProperties searchSpec) {
-		ArrayList<Book> matchingInstruments = new ArrayList<Book>();
+		ArrayList<Book> matchingBooks = new ArrayList<Book>();
 		for (Iterator i = inventory.iterator(); i.hasNext();) {
-			Book instrument = (Book) i.next();
-			if (instrument.getSpec().matches(searchSpec))
-				matchingInstruments.add(instrument);
+			Book book = (Book) i.next();
+			if (book.getSpec().matches(searchSpec))
+				matchingBooks.add(book);
 		}
-		return matchingInstruments;
+		return matchingBooks;
 	}
 }
