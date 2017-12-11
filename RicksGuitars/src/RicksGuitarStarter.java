@@ -5,6 +5,6 @@
 public class RicksGuitarStarter {
 
 	public static void main(String[] args) {
-		new MainFrame("RicksGuitars");
+		new MainFrame("BookStore");
 	}
 }

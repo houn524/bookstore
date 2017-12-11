@@ -26,8 +26,6 @@ public class DatabaseController {
 			System.out.println("드라이버 검색 실패!");
 		}
 
-//		String url = "jdbc:mysql://182.230.171.118:3306/ricksguitarsdb?autoReconnect=true&useSSL=false";
-//		String url = "jdbc:mysql://localhost:3306/ricksguitarsdb";
 		String url = "jdbc:mysql://localhost:3306/bookstoredb";
 		String user = "root";
 		String password = "root";
@@ -93,22 +91,6 @@ public class DatabaseController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		String sql = "delete from " + oldInstrument.getSpec().getProperty("instrumentType").toString()
-//				+ " where SerialNumber = '" + oldInstrument.getSerialNumber().toString() + "';";
-//		try {
-//			statement = (Statement) connection.createStatement();
-//			int n = statement.executeUpdate(sql);
-//			if (n > 0) {
-//				System.out.println("악기 제거 성공");
-//				return true;
-//			} else {
-//				System.out.println("악기 제거 실패");
-//				return false;
-//			}
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 		return false;
 	}
 
@@ -160,8 +142,7 @@ public class DatabaseController {
 	public void updateData(Book book) {
 		Statement statement = null;
 		ArrayList<String> specList = new ArrayList<String>(book.getSpec().getProperties().keySet());
-//		specList.remove("instrumentType");
-//
+
 		PreparedStatement pstmt;
 		String sql = "update book set title=?, publisher=?, author=? where id=?";
 		try {
@@ -175,25 +156,28 @@ public class DatabaseController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-//		String sql = "update " + instrument.getSpec().getProperty("instrumentType").toString() + " set Price='"
-//				+ instrument.getPrice() + "'";
-//		for (String spec : specList) {
-//			if (instrument.getSpec().getProperty(spec).toString().contains("'"))
-//				instrument.getSpec().getProperties().put(spec,
-//					instrument.getSpec().getProperty(spec).toString().replaceAll("'", "''"));
-//			sql += ", " + spec + "='" + instrument.getSpec().getProperty(spec) + "'";
-//		}
-//
-//		sql += " where SerialNumber='" + instrument.getSerialNumber() + "';";
-//		try {
-//			statement = (Statement) connection.createStatement();
-//			statement.executeUpdate(sql);
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-
+	}
+	
+	public boolean checkAccount(String id, String pw) {
+		Statement statement = null;
+		PreparedStatement pstmt;
+		ResultSet resultSet = null;
+		String sql = "select * from admin where id=? and pw=?";
+		try {
+			pstmt = connection.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pw);
+			resultSet = pstmt.executeQuery();
+			if(resultSet.isBeforeFirst()) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	/********************** 테이블의 컬럼명 가져오기 ****************************/

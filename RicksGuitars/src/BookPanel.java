@@ -11,13 +11,7 @@ import javax.swing.JTextField;
 public class BookPanel extends ObjectPanel {
 
 	public BookPanel() {
-		super("Book");
+		super();
 		// TODO Auto-generated constructor stub
-//		JTextField txtNumStrings = new JTextField(10);
-//		super.components.add(txtNumStrings);
-
-//		JLabel label = new JLabel("NumStrings : ", Label.LEFT);
-//		super.editSpecPane.add(label);
-//		super.editSpecPane.add(txtNumStrings);
 	}
 }

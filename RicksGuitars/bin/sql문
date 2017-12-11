@@ -13,3 +13,12 @@ create table book (
 
 insert into book(title, publisher, author, checkout)
 	values("객체지향 시스템개론", "헤헤출판사", "짱승", FALSE);
+	
+use bookstoredb;
+create table admin (
+	id varchar(20),
+    pw varchar(20),
+    primary key(id)
+);
+
+insert into admin values("admin", "admin");

@@ -46,16 +46,16 @@ public class ObjectPanel extends JPanel {
 	private JCheckBox chkBox;
 	private int selectedRow;
 	private Inventory inventory, defaultInventory;
-	private String instrumentType;
 	private DatabaseController dbController;
 	private ObjectPanel instance;
 	private boolean isSearching = false;
+	private boolean isLoggedin = false;
 	private BookProperties searchingSpec;
+	JButton btnDelete, btnInsert, btnLogin, btnLogout, btnEdit;
 	protected JPanel editSpecPane;
 	protected List components;
 
-	public ObjectPanel(String instrumentType) {
-		this.instrumentType = instrumentType;
+	public ObjectPanel() {
 		instance = this;
 
 		components = new ArrayList();
@@ -107,28 +107,6 @@ public class ObjectPanel extends JPanel {
 		JTextField txtTitle = new JTextField(10);
 		JTextField txtPublisher = new JTextField(10);
 		JTextField txtAuthor = new JTextField(10);
-		// txtNumStrings = new JTextField(10);
-
-//		/********************** 콤보박스 설정 ****************************/
-//		JComboBox cbBuilder = new JComboBox();
-//		cbBuilder.setEditable(true);
-//		for (Builder builder : Builder.values())
-//			cbBuilder.addItem(builder.toString());
-//
-//		JComboBox cbType = new JComboBox();
-//		cbType.setEditable(true);
-//		for (GuitarType guitarType : GuitarType.values())
-//			cbType.addItem(guitarType.toString());
-//
-//		JComboBox cbBackWood = new JComboBox();
-//		cbBackWood.setEditable(true);
-//		JComboBox cbTopWood = new JComboBox();
-//		cbTopWood.setEditable(true);
-//		for (Wood wood : Wood.values()) {
-//			cbBackWood.addItem(wood.toString());
-//			cbTopWood.addItem(wood.toString());
-//		}
-
 
 		/********************** 버튼 설정 ****************************/
 		JButton btnAllCheck = new JButton("전체선택");
@@ -150,7 +128,8 @@ public class ObjectPanel extends JPanel {
 			}
 		});
 
-		JButton btnDelete = new JButton("삭제");
+		btnDelete = new JButton("삭제");
+		btnDelete.setVisible(false);
 		btnDelete.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -170,12 +149,32 @@ public class ObjectPanel extends JPanel {
 			}
 		});
 
-		JButton btnInsert = new JButton("삽입");
+		btnInsert = new JButton("삽입");
+		btnInsert.setVisible(false);
 		btnInsert.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				InsertFrame insertFrame = new InsertFrame("책 추가", instance, dbController, (ArrayList) components);
+			}
+		});
+		
+		btnLogin = new JButton("관리자 로그인");
+		btnLogin.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				LoginFrame loginFrame = new LoginFrame("관리자 로그인", instance, dbController);
+			}
+		});
+		
+		btnLogout = new JButton("로그아웃");
+		btnLogout.setVisible(false);
+		btnLogout.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				logout();
 			}
 		});
 
@@ -194,7 +193,8 @@ public class ObjectPanel extends JPanel {
 			}
 		});
 
-		JButton btnEdit = new JButton("수정");
+		btnEdit = new JButton("수정");
+		btnEdit.setVisible(false);
 		btnEdit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -231,12 +231,8 @@ public class ObjectPanel extends JPanel {
 		/********************** 컴포넌트를 ArrayList로 관리 ****************************/
 		components.add(txtSerialNumber);
 		components.add(txtTitle);
-//		components.add(cbBuilder);
 		components.add(txtPublisher);
 		components.add(txtAuthor);
-//		components.add(cbType);
-//		components.add(cbTopWood);
-//		components.add(cbBackWood);
 
 		/********************** 패널 설정 ****************************/
 		JPanel invenButtonPane = new JPanel();
@@ -244,6 +240,8 @@ public class ObjectPanel extends JPanel {
 		invenButtonPane.add(btnAllCheck);
 		invenButtonPane.add(btnDelete);
 		invenButtonPane.add(btnInsert);
+		invenButtonPane.add(btnLogin);
+		invenButtonPane.add(btnLogout);
 
 		JPanel inventoryPane = new JPanel();
 		inventoryPane.setLayout(new BorderLayout());
@@ -386,8 +384,6 @@ public class ObjectPanel extends JPanel {
 			}
 
 		}
-//		properties.put("instrumentType", instrumentType);
-//		properties.put("대출", 0);
 
 		BookProperties spec = new BookProperties(properties);
 		return spec;
@@ -406,5 +402,25 @@ public class ObjectPanel extends JPanel {
 	/********************** 검색 중인 지 판별 ****************************/
 	public boolean isSearching() {
 		return isSearching;
+	}
+	
+	public void login() {
+		isLoggedin = true;
+		btnDelete.setVisible(true);
+		btnInsert.setVisible(true);
+		btnLogin.setVisible(false);
+		btnLogout.setVisible(true);
+		btnEdit.setVisible(true);
+		revalidate();
+	}
+	
+	public void logout() {
+		isLoggedin = false;
+		btnDelete.setVisible(false);
+		btnInsert.setVisible(false);
+		btnLogin.setVisible(true);
+		btnLogout.setVisible(false);
+		btnEdit.setVisible(false);
+		revalidate();
 	}
 }
