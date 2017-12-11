@@ -208,8 +208,10 @@ public class ObjectPanel extends JPanel {
 
 				updateTable(null);
 
-				if (isSearching)
+				if (isSearching) {
+					defaultInventory = inventory;
 					searchTable(searchingSpec);
+				}
 
 				clearSpecField();
 			}

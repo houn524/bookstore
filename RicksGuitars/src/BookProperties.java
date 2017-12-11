@@ -35,7 +35,7 @@ public class BookProperties {
 				continue;
 			}
 				
-			if (!properties.get(propertyName).equals(otherSpec.getProperty(propertyName))) {
+			if (!((String) properties.get(propertyName)).contains((CharSequence) otherSpec.getProperty(propertyName))) {
 				System.out.println("false");
 				return false;
 			}
