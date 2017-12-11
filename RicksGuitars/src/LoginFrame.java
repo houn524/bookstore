@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 public class LoginFrame extends JFrame {
@@ -24,7 +25,7 @@ public class LoginFrame extends JFrame {
 		JTextField txtId = new JTextField(10);
 		add(txtId);
 		add(new JLabel("PASSWORD : ", Label.LEFT));
-		JTextField txtPw = new JTextField(10);
+		JPasswordField txtPw = new JPasswordField(10);
 		add(txtPw);
 		
 		JButton btnOK = new JButton("확인");
