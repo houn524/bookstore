@@ -51,7 +51,7 @@ public class ObjectPanel extends JPanel {
 	private boolean isSearching = false;
 	private boolean isLoggedin = false;
 	private BookProperties searchingSpec;
-	JButton btnDelete, btnInsert, btnLogin, btnLogout, btnEdit;
+	JButton btnDelete, btnInsert, btnLogin, btnLogout, btnEdit, btnCheckout;
 	protected JPanel editSpecPane;
 	protected List components;
 
@@ -159,6 +159,29 @@ public class ObjectPanel extends JPanel {
 			}
 		});
 		
+		btnCheckout = new JButton("대출");
+		btnCheckout.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				ArrayList<Integer> rowList = new ArrayList<Integer>();
+				for (int i = 0; i < defaultTableModel.getRowCount(); i++) {
+					if ((boolean) defaultTableModel.getValueAt(i, 0) == true) {
+						if(dbController.checkoutBook(inventory.getByRow(i), true)) {
+							clearSpecField();
+						}
+					}
+				}
+				
+				updateTable(null);
+
+				if (isSearching) {
+					defaultInventory = inventory;
+					searchTable(searchingSpec);
+				}
+			}
+		});
+		
 		btnLogin = new JButton("관리자 로그인");
 		btnLogin.addActionListener(new ActionListener() {
 			@Override
@@ -240,6 +263,7 @@ public class ObjectPanel extends JPanel {
 		invenButtonPane.add(btnAllCheck);
 		invenButtonPane.add(btnDelete);
 		invenButtonPane.add(btnInsert);
+		invenButtonPane.add(btnCheckout);
 		invenButtonPane.add(btnLogin);
 		invenButtonPane.add(btnLogout);
 

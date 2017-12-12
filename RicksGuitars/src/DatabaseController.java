@@ -158,6 +158,26 @@ public class DatabaseController {
 		}
 	}
 	
+	public boolean checkoutBook(Book book, boolean checked) {
+		Statement statement = null;
+		ArrayList<String> specList = new ArrayList<String>(book.getSpec().getProperties().keySet());
+
+		PreparedStatement pstmt;
+		String sql = "update book set checkout=? where id=?";
+		try {
+			pstmt = connection.prepareStatement(sql);
+			pstmt.setBoolean(1, checked);
+			pstmt.setString(2, String.valueOf(book.getSerialNumber()));
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return true;
+	}
+	
+	/********************** 관리가 계정 확인 ****************************/
 	public boolean checkAccount(String id, String pw) {
 		Statement statement = null;
 		PreparedStatement pstmt;
