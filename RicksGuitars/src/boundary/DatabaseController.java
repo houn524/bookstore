@@ -1,6 +1,6 @@
-/* ?��?�� : DatabaseController.java				 *
- * 과목�? : 객체�??��?��?��?��분석및설�?					 *
- * ?��?�� : ?��?��?��베이?���? ?��?��?�� ?��?��?��?�� 모두 �?리해주는 ?��?��?��*/
+/* 파일 : DatabaseController.java				 *
+ * 과목명 : 객체지향시스템분석및설계					 *
+ * 서술 : 데이터베이스를 이용한 연산들을 모두 관리해주는 클래스*/
 package boundary;
 
 import java.sql.PreparedStatement;
@@ -13,11 +13,6 @@ import com.mysql.jdbc.Statement;
 
 import entity.Book;
 
-/**
- * @uml.annotations
- *    uml_generalization="mmi:///#jsrctype^name=DatabaseConnector[jcu^name=DatabaseConnector.java[jpack^name=boundary[jsrcroot^srcfolder=src[project^id=bookstore]]]]$uml.Class" 
- *    uml_realization="mmi:///#jsrctype^name=DatabaseConnector[jcu^name=DatabaseConnector.java[jpack^name=boundary[jsrcroot^srcfolder=src[project^id=bookstore]]]]$uml.Class"
- */
 public class DatabaseController {
 	private Connection connection;
 	private String[] columnNames;
@@ -28,7 +23,7 @@ public class DatabaseController {
 		dbConnector.connectSQL();
 	}
 	
-	/********************** ?��?��?��베이?��?�� �? 추�? ****************************/
+	/********************** 데이터베이스에 책 추가 ****************************/
 	public boolean insertBook(Book book) {
 		Statement statement = null;
 
@@ -45,10 +40,10 @@ public class DatabaseController {
 			int n = pstmt.executeUpdate();
 			
 			if (n > 0) {
-				System.out.println("�? 추�? ?���?");
+				System.out.println("책 삽입 성공");
 				return true;
 			} else {
-				System.out.println("�? 추�? ?��?��");
+				System.out.println("책 삽입 실패");
 				return false;
 			}
 		} catch (SQLException e1) {
@@ -59,7 +54,7 @@ public class DatabaseController {
 		return false;
 	}
 
-	/********************** ?��?��?��베이?��?��?�� �? ?���? ****************************/
+	/********************** 데이터베이스에서 책 제거 ****************************/
 	public boolean deleteBook(Book oldBook) {
 		Statement statement = null;
 		String sql = "delete from book where id=?";
@@ -71,10 +66,10 @@ public class DatabaseController {
 			int n = pstmt.executeUpdate();
 			
 			if (n > 0) {
-				System.out.println("�? ?���? ?���?");
+				System.out.println("책 제거 성공");
 				return true;
 			} else {
-				System.out.println("�? ?���? ?��?��");
+				System.out.println("책 제거 실패");
 				return false;
 			}
 		} catch (SQLException e) {
@@ -85,7 +80,7 @@ public class DatabaseController {
 	}
 
 
-	/********************** ?��?��?��베이?��?�� ?��?�� 모든 �? 불러?���? ****************************/
+	/********************** 데이터베이스에 있는 모든 책 불러오기 ****************************/
 	public Object[][] getBooks() {
 		Statement statement = null;
 		ResultSet resultSet = null;
@@ -127,7 +122,7 @@ public class DatabaseController {
 		return datas;
 	}
 
-	/********************** ?��?��?��베이?��?�� ?��?�� ?��?��?�� ?��?�� ****************************/
+	/********************** 데이터베이스에 있는 데이터 수정 ****************************/
 	public void updateData(Book book) {
 		Statement statement = null;
 		ArrayList<String> specList = new ArrayList<String>(book.getSpec().getProperties().keySet());
@@ -147,6 +142,7 @@ public class DatabaseController {
 		}
 	}
 	
+	/********************** 책 대출 플래그 설정 ****************************/
 	public boolean checkoutBook(int id, boolean checked) {
 		PreparedStatement pstmt;
 		String sql = "update book set checkout=? where id=?";
@@ -156,10 +152,10 @@ public class DatabaseController {
 			pstmt.setInt(2, id);
 			int n = pstmt.executeUpdate();
 			if (n > 0) {
-				System.out.println("?���?");
+				System.out.println("성공");
 				return true;
 			} else {
-				System.out.println("?��?��");
+				System.out.println("실패");
 				return false;
 			}
 		} catch (SQLException e) {
@@ -169,7 +165,7 @@ public class DatabaseController {
 		return true;
 	}
 	
-	/********************** �?리�? 계정 ?��?�� ****************************/
+	/********************** 관리자 계정 확인 ****************************/
 	public boolean checkAccount(String id, String pw) {
 		PreparedStatement pstmt;
 		ResultSet resultSet = null;
@@ -191,7 +187,7 @@ public class DatabaseController {
 		return false;
 	}
 	
-	/********************** ?��?��블의 컬럼�? �??��?���? ****************************/
+	/********************** 테이블의 컬럼명 가져오기 ****************************/
 	public String[] getColumnNames() {
 		return columnNames;
 	}
