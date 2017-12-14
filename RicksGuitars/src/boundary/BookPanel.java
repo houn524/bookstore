@@ -57,9 +57,9 @@ public class BookPanel extends JPanel {
 	private boolean isLoggedin = false;
 	private BookProperties searchingSpec;
 	private CompareLogic compareLogic;
-	JButton btnDelete, btnInsert, btnLogin, btnLogout, btnEdit, btnCheckout, btnReturn;
-	protected JPanel editSpecPane;
-	protected List components;
+	private JButton btnDelete, btnInsert, btnLogin, btnLogout, btnEdit, btnCheckout, btnReturn;
+	private JPanel editSpecPane;
+	private List components;
 
 	public BookPanel() {
 		instance = this;
@@ -174,8 +174,7 @@ public class BookPanel extends JPanel {
 				ArrayList<Integer> rowList = new ArrayList<Integer>();
 				for (int i = 0; i < defaultTableModel.getRowCount(); i++) {
 					if ((boolean) defaultTableModel.getValueAt(i, 0) == true) {
-						if(dbController.checkoutBook(inventory.getByRow(i).getSerialNumber(), true))
-							clearSpecField();
+						dbController.checkoutBook(inventory.getByRow(i).getSerialNumber(), true);
 					}
 				}
 				
@@ -185,6 +184,8 @@ public class BookPanel extends JPanel {
 				} else {
 					updateTable(null);
 				}
+				
+				clearSpecField();
 			}
 		});
 		

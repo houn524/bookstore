@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<!--Rational Software Architect Designer 9.6-->
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.mmi.ui.signatures.diagram" version="7.0.0"><feature description="" name="Rational Modeling Platform (com.ibm.xtools.rmp)" url="" version="7.0.0"/></signature>?>
+<?com.ibm.xtools.emf.core.signature <signature id="com.ibm.xtools.uml.msl.model" version="7.0.0"><feature description="" name="com.ibm.xtools.ruml.feature" url="" version="7.0.0"/></signature>?>
+<uml:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmlns:umlnotation="http://www.ibm.com/xtools/1.5.3/Umlnotation" xmi:id="_3u7P0OCzEeeB6_uYxhNStw" name="공백 패키지">
+  <eAnnotations xmi:id="_3u7P0eCzEeeB6_uYxhNStw" source="uml2.diagrams" references="_3u7P0uCzEeeB6_uYxhNStw">
+    <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_3u7P0uCzEeeB6_uYxhNStw" type="Freeform" name="Main"/>
+    <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_-HZ00OCzEeeB6_uYxhNStw" type="Usecase" name="유스 케이스 다이어그램1">
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9HmkOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9HmkeC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9HmkuC0EeeB6_uYxhNStw" width="2216" height="1322"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Hmk-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9HmlOC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9HmleC0EeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_C9HmluC0EeeB6_uYxhNStw" visible="false" type="Extension_Points"/>
+        <element xmi:type="uml:UseCase" href="platform:/resource/MyProject/공백%20패키지.emx#_OV0nwNTNEee8KbzvWiNW9g?공백%20패키지/책%20검색?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9Hml-C0EeeB6_uYxhNStw" x="8448" y="5412"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9INoOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="15912618" transparency="0" lineColor="15912618" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9INoeC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9INouC0EeeB6_uYxhNStw" width="1455" height="2381"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9INo-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9INpOC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9INpeC0EeeB6_uYxhNStw" type="Parent"/>
+        <element xmi:type="uml:Actor" href="platform:/resource/MyProject/공백%20패키지.emx#_VorKUNTNEee8KbzvWiNW9g?공백%20패키지/Manager?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9INpuC0EeeB6_uYxhNStw" x="16104" y="4752"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9INp-C0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9INqOC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9INqeC0EeeB6_uYxhNStw" width="2216" height="1322"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9INquC0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9INq-C0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9INrOC0EeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_C9INreC0EeeB6_uYxhNStw" visible="false" type="Extension_Points"/>
+        <element xmi:type="uml:UseCase" href="platform:/resource/MyProject/공백%20패키지.emx#_YMxewNTNEee8KbzvWiNW9g?공백%20패키지/관리자%20로그인?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9INruC0EeeB6_uYxhNStw" x="11484" y="3564"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9I0sOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9I0seC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9I0suC0EeeB6_uYxhNStw" width="2216" height="1322"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9I0s-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9I0tOC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9I0teC0EeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_C9I0tuC0EeeB6_uYxhNStw" visible="false" type="Extension_Points"/>
+        <element xmi:type="uml:UseCase" href="platform:/resource/MyProject/공백%20패키지.emx#_gWdisNTNEee8KbzvWiNW9g?공백%20패키지/책%20이름%20검색?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9I0t-C0EeeB6_uYxhNStw" x="5676" y="1452"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9I0uOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9I0ueC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9I0uuC0EeeB6_uYxhNStw" width="2216" height="1322"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9I0u-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9I0vOC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9I0veC0EeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_C9I0vuC0EeeB6_uYxhNStw" visible="false" type="Extension_Points"/>
+        <element xmi:type="uml:UseCase" href="platform:/resource/MyProject/공백%20패키지.emx#_hVsyINTNEee8KbzvWiNW9g?공백%20패키지/저자%20이름%20검색?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9I0v-C0EeeB6_uYxhNStw" x="8712" y="1452"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9I0wOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9I0weC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9I0wuC0EeeB6_uYxhNStw" width="2216" height="1322"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9I0w-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9I0xOC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9I0xeC0EeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_C9I0xuC0EeeB6_uYxhNStw" visible="false" type="Extension_Points"/>
+        <element xmi:type="uml:UseCase" href="platform:/resource/MyProject/공백%20패키지.emx#_sa3IsNTNEee8KbzvWiNW9g?공백%20패키지/책%20등록?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9I0x-C0EeeB6_uYxhNStw" x="9214" y="8021"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9JbwOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9JbweC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9JbwuC0EeeB6_uYxhNStw" width="2216" height="1322"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Jbw-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9JbxOC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9JbxeC0EeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_C9JbxuC0EeeB6_uYxhNStw" visible="false" type="Extension_Points"/>
+        <element xmi:type="uml:UseCase" href="platform:/resource/MyProject/공백%20패키지.emx#_tMlgkNTNEee8KbzvWiNW9g?공백%20패키지/책%20정보%20수정?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9Jbx-C0EeeB6_uYxhNStw" x="9240" y="10032"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9JbyOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9JbyeC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9JbyuC0EeeB6_uYxhNStw" width="2216" height="1322"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Jby-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9JbzOC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9JbzeC0EeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_C9JbzuC0EeeB6_uYxhNStw" visible="false" type="Extension_Points"/>
+        <element xmi:type="uml:UseCase" href="platform:/resource/MyProject/공백%20패키지.emx#_uW7MwNTNEee8KbzvWiNW9g?공백%20패키지/책%20삭제?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9Jbz-C0EeeB6_uYxhNStw" x="9240" y="12043"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9KC0OC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9KC0eC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9KC0uC0EeeB6_uYxhNStw" width="2216" height="1322"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9KC0-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9KC1OC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9KC1eC0EeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_C9KC1uC0EeeB6_uYxhNStw" visible="false" type="Extension_Points"/>
+        <element xmi:type="uml:UseCase" href="platform:/resource/MyProject/공백%20패키지.emx#_x3sk0NTNEee8KbzvWiNW9g?공백%20패키지/책%20반납?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9KC1-C0EeeB6_uYxhNStw" x="12012" y="10956"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9KC2OC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="16116705" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9KC2eC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9KC2uC0EeeB6_uYxhNStw" width="2216" height="1322"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9KC2-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9KC3OC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9KC3eC0EeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_C9KC3uC0EeeB6_uYxhNStw" visible="false" type="Extension_Points"/>
+        <element xmi:type="uml:UseCase" href="platform:/resource/MyProject/공백%20패키지.emx#_zQotsNTNEee8KbzvWiNW9g?공백%20패키지/책%20대출?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9KC3-C0EeeB6_uYxhNStw" x="6600" y="8448"/>
+      </children>
+      <children xmi:type="umlnotation:UMLClassifierShape" xmi:id="_C9Kp4OC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" fillColor="15912618" transparency="0" lineColor="15912618" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9Kp4eC0EeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_C9Kp4uC0EeeB6_uYxhNStw" width="1455" height="2381"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Kp4-C0EeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Kp5OC0EeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Kp5eC0EeeB6_uYxhNStw" type="Parent"/>
+        <element xmi:type="uml:Actor" href="platform:/resource/MyProject/공백%20패키지.emx#_aDYloNTOEee8KbzvWiNW9g?공백%20패키지/Customer?"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9Kp5uC0EeeB6_uYxhNStw" x="2640" y="4620"/>
+      </children>
+      <element xsi:nil="true"/>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9Kp5-C0EeeB6_uYxhNStw" source="_C9INoOC0EeeB6_uYxhNStw" target="_C9HmkOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" lineColor="8421504" lineWidth="0" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9Kp6OC0EeeB6_uYxhNStw" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Kp6eC0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Kp6uC0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9Kp6-C0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9Kp7OC0EeeB6_uYxhNStw" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Kp7eC0EeeB6_uYxhNStw" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Ww1sQNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9Kp7uC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9Kp7-C0EeeB6_uYxhNStw" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Kp8OC0EeeB6_uYxhNStw" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Ww1sQNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9Kp8eC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9Kp8uC0EeeB6_uYxhNStw" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Kp8-C0EeeB6_uYxhNStw" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Wwyo8NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20검색?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9Kp9OC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9Kp9eC0EeeB6_uYxhNStw" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9Kp9uC0EeeB6_uYxhNStw" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Wwyo8NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20검색?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9Kp9-C0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9Kp-OC0EeeB6_uYxhNStw" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9Kp-eC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Ww1sQNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9Kp-uC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9Kp--C0EeeB6_uYxhNStw" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9Kp_OC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Wwyo8NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20검색?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9Kp_eC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9Kp_uC0EeeB6_uYxhNStw" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9Kp_-C0EeeB6_uYxhNStw" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Ww1sQNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9KqAOC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9KqAeC0EeeB6_uYxhNStw" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9KqAuC0EeeB6_uYxhNStw" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Wwyo8NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20검색?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9KqA-C0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/MyProject/공백%20패키지.emx#_WwyB4NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9KqBOC0EeeB6_uYxhNStw" points="[-34, -7, 221, 44]$[-256, -72, -1, -21]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9L4AOC0EeeB6_uYxhNStw" source="_C9INoOC0EeeB6_uYxhNStw" target="_C9INp-C0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" lineColor="8421504" lineWidth="0" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9L4AeC0EeeB6_uYxhNStw" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9L4AuC0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9L4A-C0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9L4BOC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9L4BeC0EeeB6_uYxhNStw" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9L4BuC0EeeB6_uYxhNStw" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Zmd1kNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9L4B-C0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9L4COC0EeeB6_uYxhNStw" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9L4CeC0EeeB6_uYxhNStw" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Zmd1kNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9L4CuC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9L4C-C0EeeB6_uYxhNStw" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9L4DOC0EeeB6_uYxhNStw" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_ZmaLMNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/관리자%20로그인?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9L4DeC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9L4DuC0EeeB6_uYxhNStw" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9L4D-C0EeeB6_uYxhNStw" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_ZmaLMNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/관리자%20로그인?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9L4EOC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9L4EeC0EeeB6_uYxhNStw" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9L4EuC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Zmd1kNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9L4E-C0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9L4FOC0EeeB6_uYxhNStw" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9L4FeC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_ZmaLMNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/관리자%20로그인?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9L4FuC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9L4F-C0EeeB6_uYxhNStw" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9L4GOC0EeeB6_uYxhNStw" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_Zmd1kNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9L4GeC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9L4GuC0EeeB6_uYxhNStw" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9L4G-C0EeeB6_uYxhNStw" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_ZmaLMNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/관리자%20로그인?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9L4HOC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/MyProject/공백%20패키지.emx#_ZmZkINTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9L4HeC0EeeB6_uYxhNStw" points="[-466, -336, 2279, 1645]$[-2068, -1492, 677, 489]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9MfEOC0EeeB6_uYxhNStw" source="_C9I0uOC0EeeB6_uYxhNStw" target="_C9HmkOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" roundedBendpointsRadius="4" routing="Rectilinear" lineColor="8421504" lineWidth="1" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfEeC0EeeB6_uYxhNStw" type="KindLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfEuC0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfE-C0EeeB6_uYxhNStw" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfFOC0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9MfFeC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <element xmi:type="uml:Extend" href="platform:/resource/MyProject/공백%20패키지.emx#_j3pKcNTNEee8KbzvWiNW9g?공백%20패키지/저자%20이름%20검색/%3CExtend%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9MfFuC0EeeB6_uYxhNStw" points="[5, 9, -42, -99]$[53, 87, 6, -21]"/>
+        <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_C9MfF-C0EeeB6_uYxhNStw" id="(0.7003610108303249,0.12783661119515885)"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9MfGOC0EeeB6_uYxhNStw" source="_C9I0sOC0EeeB6_uYxhNStw" target="_C9HmkOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" lineColor="8421504" lineWidth="0" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfGeC0EeeB6_uYxhNStw" type="KindLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfGuC0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfG-C0EeeB6_uYxhNStw" type="Kind"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfHOC0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9MfHeC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <element xmi:type="uml:Extend" href="platform:/resource/MyProject/공백%20패키지.emx#_mGXEwNTNEee8KbzvWiNW9g?공백%20패키지/책%20이름%20검색/%3CExtend%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9MfHuC0EeeB6_uYxhNStw" points="[366, 522, -2406, -3438]$[2405, 3437, -367, -523]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9MfH-C0EeeB6_uYxhNStw" source="_C9INoOC0EeeB6_uYxhNStw" target="_C9I0wOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" lineColor="8421504" lineWidth="0" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfIOC0EeeB6_uYxhNStw" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfIeC0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfIuC0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9MfI-C0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfJOC0EeeB6_uYxhNStw" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfJeC0EeeB6_uYxhNStw" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_02lX0NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9MfJuC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfJ-C0EeeB6_uYxhNStw" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfKOC0EeeB6_uYxhNStw" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_02lX0NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9MfKeC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfKuC0EeeB6_uYxhNStw" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfK-C0EeeB6_uYxhNStw" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_02gfUNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20등록?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9MfLOC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfLeC0EeeB6_uYxhNStw" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9MfLuC0EeeB6_uYxhNStw" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_02gfUNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20등록?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9MfL-C0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfMOC0EeeB6_uYxhNStw" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9MfMeC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_02lX0NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9MfMuC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfM-C0EeeB6_uYxhNStw" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9MfNOC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_02gfUNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20등록?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9MfNeC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfNuC0EeeB6_uYxhNStw" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9MfN-C0EeeB6_uYxhNStw" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_02lX0NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9MfOOC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9MfOeC0EeeB6_uYxhNStw" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9MfOuC0EeeB6_uYxhNStw" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_02gfUNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20등록?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9MfO-C0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/MyProject/공백%20패키지.emx#_02eDENTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9NGIOC0EeeB6_uYxhNStw" points="[-359, 174, 4738, -2302]$[-4303, 2089, 794, -387]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9NGIeC0EeeB6_uYxhNStw" source="_C9INoOC0EeeB6_uYxhNStw" target="_C9JbwOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" lineColor="8421504" lineWidth="0" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NGIuC0EeeB6_uYxhNStw" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NGI-C0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NGJOC0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9NGJeC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NGJuC0EeeB6_uYxhNStw" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NGJ-C0EeeB6_uYxhNStw" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_1dFXINTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NGKOC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NGKeC0EeeB6_uYxhNStw" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NGKuC0EeeB6_uYxhNStw" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_1dFXINTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NGK-C0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NGLOC0EeeB6_uYxhNStw" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NGLeC0EeeB6_uYxhNStw" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_1dDh8NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20정보%20수정?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NGLuC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NGL-C0EeeB6_uYxhNStw" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NGMOC0EeeB6_uYxhNStw" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_1dDh8NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20정보%20수정?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NGMeC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NGMuC0EeeB6_uYxhNStw" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9NGM-C0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_1dFXINTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NGNOC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NGNeC0EeeB6_uYxhNStw" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9NGNuC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_1dDh8NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20정보%20수정?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NGN-C0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NGOOC0EeeB6_uYxhNStw" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9NGOeC0EeeB6_uYxhNStw" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_1dFXINTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NGOuC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NGO-C0EeeB6_uYxhNStw" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9NGPOC0EeeB6_uYxhNStw" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_1dDh8NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20정보%20수정?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NGPeC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/MyProject/공백%20패키지.emx#_1dC64NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9NGPuC0EeeB6_uYxhNStw" points="[-244, 216, 4827, -4271]$[-4526, 4004, 545, -483]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9NtMOC0EeeB6_uYxhNStw" source="_C9INoOC0EeeB6_uYxhNStw" target="_C9JbyOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" lineColor="8421504" lineWidth="0" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NtMeC0EeeB6_uYxhNStw" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NtMuC0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NtM-C0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9NtNOC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NtNeC0EeeB6_uYxhNStw" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NtNuC0EeeB6_uYxhNStw" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_18ny0NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NtN-C0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NtOOC0EeeB6_uYxhNStw" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NtOeC0EeeB6_uYxhNStw" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_18ny0NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NtOuC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NtO-C0EeeB6_uYxhNStw" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NtPOC0EeeB6_uYxhNStw" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_18kIcNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20삭제?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NtPeC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NtPuC0EeeB6_uYxhNStw" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9NtP-C0EeeB6_uYxhNStw" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_18kIcNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20삭제?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NtQOC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NtQeC0EeeB6_uYxhNStw" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9NtQuC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_18ny0NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NtQ-C0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NtROC0EeeB6_uYxhNStw" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9NtReC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_18kIcNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20삭제?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NtRuC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NtR-C0EeeB6_uYxhNStw" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9NtSOC0EeeB6_uYxhNStw" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_18ny0NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NtSeC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9NtSuC0EeeB6_uYxhNStw" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9NtS-C0EeeB6_uYxhNStw" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_18kIcNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20삭제?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9NtTOC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/MyProject/공백%20패키지.emx#_18iTQNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9NtTeC0EeeB6_uYxhNStw" points="[-244, 313, 4827, -6185]$[-4669, 5981, 402, -517]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9OUQOC0EeeB6_uYxhNStw" source="_C9INoOC0EeeB6_uYxhNStw" target="_C9KC0OC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" lineColor="8421504" lineWidth="0" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUQeC0EeeB6_uYxhNStw" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUQuC0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUQ-C0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9OUROC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUReC0EeeB6_uYxhNStw" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OURuC0EeeB6_uYxhNStw" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_2WUsQNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUR-C0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUSOC0EeeB6_uYxhNStw" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUSeC0EeeB6_uYxhNStw" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_2WUsQNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUSuC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUS-C0EeeB6_uYxhNStw" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUTOC0EeeB6_uYxhNStw" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_2WSQANTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20반납?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUTeC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUTuC0EeeB6_uYxhNStw" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUT-C0EeeB6_uYxhNStw" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_2WSQANTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20반납?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUUOC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUUeC0EeeB6_uYxhNStw" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9OUUuC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_2WUsQNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUU-C0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUVOC0EeeB6_uYxhNStw" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9OUVeC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_2WSQANTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20반납?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUVuC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUV-C0EeeB6_uYxhNStw" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9OUWOC0EeeB6_uYxhNStw" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_2WUsQNTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUWeC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUWuC0EeeB6_uYxhNStw" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9OUW-C0EeeB6_uYxhNStw" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_2WSQANTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20반납?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUXOC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/MyProject/공백%20패키지.emx#_2WRB4NTNEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9OUXeC0EeeB6_uYxhNStw" points="[-1, 9, 34, -125]$[-25, 155, 10, 21]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9OUXuC0EeeB6_uYxhNStw" source="_C9Kp4OC0EeeB6_uYxhNStw" target="_C9HmkOC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" lineColor="8421504" lineWidth="0" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUX-C0EeeB6_uYxhNStw" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUYOC0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUYeC0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9OUYuC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUY-C0EeeB6_uYxhNStw" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUZOC0EeeB6_uYxhNStw" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bLmx8NTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUZeC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUZuC0EeeB6_uYxhNStw" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUZ-C0EeeB6_uYxhNStw" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bLmx8NTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUaOC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUaeC0EeeB6_uYxhNStw" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUauC0EeeB6_uYxhNStw" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bLjuoNTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20검색?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUa-C0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUbOC0EeeB6_uYxhNStw" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9OUbeC0EeeB6_uYxhNStw" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bLjuoNTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20검색?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUbuC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUb-C0EeeB6_uYxhNStw" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9OUcOC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bLmx8NTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUceC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUcuC0EeeB6_uYxhNStw" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9OUc-C0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bLjuoNTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20검색?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUdOC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUdeC0EeeB6_uYxhNStw" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9OUduC0EeeB6_uYxhNStw" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bLmx8NTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUd-C0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9OUeOC0EeeB6_uYxhNStw" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9OUeeC0EeeB6_uYxhNStw" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bLjuoNTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20검색?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9OUeuC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/MyProject/공백%20패키지.emx#_bLhSYNTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9OUe-C0EeeB6_uYxhNStw" points="[35, -10, -137, 34]$[167, -23, -5, 21]"/>
+      </edges>
+      <edges xmi:type="umlnotation:UMLConnector" xmi:id="_C9O7UOC0EeeB6_uYxhNStw" source="_C9Kp4OC0EeeB6_uYxhNStw" target="_C9KC2OC0EeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" lineColor="8421504" lineWidth="0" showStereotype="Text">
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9O7UeC0EeeB6_uYxhNStw" type="NameLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9O7UuC0EeeB6_uYxhNStw" type="Stereotype"/>
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9O7U-C0EeeB6_uYxhNStw" type="Name"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C9O7VOC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9O7VeC0EeeB6_uYxhNStw" visible="false" type="ToMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9O7VuC0EeeB6_uYxhNStw" type="ToMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bkqyMNTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9O7V-C0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9O7WOC0EeeB6_uYxhNStw" visible="false" type="ToRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9O7WeC0EeeB6_uYxhNStw" type="ToRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bkqyMNTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9O7WuC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9O7W-C0EeeB6_uYxhNStw" visible="false" type="FromMultiplicityLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9O7XOC0EeeB6_uYxhNStw" type="FromMultiplicity"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bkoV8NTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20대출?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9O7XeC0EeeB6_uYxhNStw" y="396"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9O7XuC0EeeB6_uYxhNStw" visible="false" type="FromRoleLabel">
+          <children xmi:type="notation:BasicDecorationNode" xmi:id="_C9O7X-C0EeeB6_uYxhNStw" type="FromRole"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bkoV8NTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20대출?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9O7YOC0EeeB6_uYxhNStw" y="-397"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9O7YeC0EeeB6_uYxhNStw" type="ToQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9O7YuC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bkqyMNTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9O7Y-C0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9O7ZOC0EeeB6_uYxhNStw" type="FromQualifierLabel">
+          <children xmi:type="notation:SemanticListCompartment" xmi:id="_C9O7ZeC0EeeB6_uYxhNStw" type="QualifierCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bkoV8NTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20대출?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9O7ZuC0EeeB6_uYxhNStw" y="-186"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9O7Z-C0EeeB6_uYxhNStw" type="ToConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9O7aOC0EeeB6_uYxhNStw" type="ToConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bkqyMNTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/%3CProperty%3E?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9O7aeC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <children xmi:type="notation:DecorationNode" xmi:id="_C9O7auC0EeeB6_uYxhNStw" type="FromConstraintLabel">
+          <children xmi:type="notation:ListCompartment" xmi:id="_C9O7a-C0EeeB6_uYxhNStw" type="FromConstraintCompartment"/>
+          <element xmi:type="uml:Property" href="platform:/resource/MyProject/공백%20패키지.emx#_bkoV8NTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E/책%20대출?"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_C9O7bOC0EeeB6_uYxhNStw" y="1058"/>
+        </children>
+        <element xmi:type="uml:Association" href="platform:/resource/MyProject/공백%20패키지.emx#_bknH0NTOEee8KbzvWiNW9g?공백%20패키지/%3CAssociation%3E?"/>
+        <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9O7beC0EeeB6_uYxhNStw" points="[12, 9, -90, -62]$[110, 91, 8, 20]"/>
+      </edges>
+    </contents>
+  </eAnnotations>
+  <packageImport xmi:id="_3u7P0-CzEeeB6_uYxhNStw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <profileApplication xmi:id="_3u7P1OCzEeeB6_uYxhNStw">
+    <eAnnotations xmi:id="_3u7P1eCzEeeB6_uYxhNStw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+  </profileApplication>
+  <profileApplication xmi:id="_3u7P1uCzEeeB6_uYxhNStw">
+    <eAnnotations xmi:id="_3u7P1-CzEeeB6_uYxhNStw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Default.epx#_fNwoAAqoEd6-N_NOT9vsCA?Default/Default?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Default.epx#_a_S3wNWLEdiy4IqP8whjFA?Default?"/>
+  </profileApplication>
+  <profileApplication xmi:id="_3u7P2OCzEeeB6_uYxhNStw">
+    <eAnnotations xmi:id="_3u7P2eCzEeeB6_uYxhNStw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_4OVBUD0TEeKt-L0gyEptgQ?Deployment/Deployment?"/>
+    </eAnnotations>
+    <appliedProfile href="pathmap://UML2_MSL_PROFILES/Deployment.epx#_vjbuwOvHEdiDX5bji0iVSA?Deployment?"/>
+  </profileApplication>
+</uml:Package>

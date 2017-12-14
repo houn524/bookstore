@@ -1,6 +1,6 @@
-/* 파일 : DatabaseController.java				 *
- * 과목명 : 객체지향시스템분석및설계					 *
- * 서술 : 데이터베이스를 이용한 연산들을 모두 관리해주는 클래스*/
+/* ?��?�� : DatabaseController.java				 *
+ * 과목�? : 객체�??��?��?��?��분석및설�?					 *
+ * ?��?�� : ?��?��?��베이?���? ?��?��?�� ?��?��?��?�� 모두 �?리해주는 ?��?��?��*/
 package boundary;
 
 import java.sql.PreparedStatement;
@@ -13,6 +13,11 @@ import com.mysql.jdbc.Statement;
 
 import entity.Book;
 
+/**
+ * @uml.annotations
+ *    uml_generalization="mmi:///#jsrctype^name=DatabaseConnector[jcu^name=DatabaseConnector.java[jpack^name=boundary[jsrcroot^srcfolder=src[project^id=bookstore]]]]$uml.Class" 
+ *    uml_realization="mmi:///#jsrctype^name=DatabaseConnector[jcu^name=DatabaseConnector.java[jpack^name=boundary[jsrcroot^srcfolder=src[project^id=bookstore]]]]$uml.Class"
+ */
 public class DatabaseController {
 	private Connection connection;
 	private String[] columnNames;
@@ -23,7 +28,7 @@ public class DatabaseController {
 		dbConnector.connectSQL();
 	}
 	
-	/********************** 데이터베이스에 책 추가 ****************************/
+	/********************** ?��?��?��베이?��?�� �? 추�? ****************************/
 	public boolean insertBook(Book book) {
 		Statement statement = null;
 
@@ -40,10 +45,10 @@ public class DatabaseController {
 			int n = pstmt.executeUpdate();
 			
 			if (n > 0) {
-				System.out.println("책 추가 성공");
+				System.out.println("�? 추�? ?���?");
 				return true;
 			} else {
-				System.out.println("책 추가 실패");
+				System.out.println("�? 추�? ?��?��");
 				return false;
 			}
 		} catch (SQLException e1) {
@@ -54,7 +59,7 @@ public class DatabaseController {
 		return false;
 	}
 
-	/********************** 데이터베이스에서 책 제거 ****************************/
+	/********************** ?��?��?��베이?��?��?�� �? ?���? ****************************/
 	public boolean deleteBook(Book oldBook) {
 		Statement statement = null;
 		String sql = "delete from book where id=?";
@@ -66,10 +71,10 @@ public class DatabaseController {
 			int n = pstmt.executeUpdate();
 			
 			if (n > 0) {
-				System.out.println("책 제거 성공");
+				System.out.println("�? ?���? ?���?");
 				return true;
 			} else {
-				System.out.println("책 제거 실패");
+				System.out.println("�? ?���? ?��?��");
 				return false;
 			}
 		} catch (SQLException e) {
@@ -80,7 +85,7 @@ public class DatabaseController {
 	}
 
 
-	/********************** 데이터베이스에 있는 모든 책 불러오기 ****************************/
+	/********************** ?��?��?��베이?��?�� ?��?�� 모든 �? 불러?���? ****************************/
 	public Object[][] getBooks() {
 		Statement statement = null;
 		ResultSet resultSet = null;
@@ -122,7 +127,7 @@ public class DatabaseController {
 		return datas;
 	}
 
-	/********************** 데이터베이스에 있는 데이터 수정 ****************************/
+	/********************** ?��?��?��베이?��?�� ?��?�� ?��?��?�� ?��?�� ****************************/
 	public void updateData(Book book) {
 		Statement statement = null;
 		ArrayList<String> specList = new ArrayList<String>(book.getSpec().getProperties().keySet());
@@ -131,9 +136,9 @@ public class DatabaseController {
 		String sql = "update book set title=?, publisher=?, author=? where id=?";
 		try {
 			pstmt = dbConnector.getConnection().prepareStatement(sql);
-			pstmt.setString(1, book.getSpec().getProperty("제목").toString());
-			pstmt.setString(2, book.getSpec().getProperty("출판사").toString());
-			pstmt.setString(3, book.getSpec().getProperty("저자").toString());
+			pstmt.setString(1, book.getSpec().getProperty("?���?").toString());
+			pstmt.setString(2, book.getSpec().getProperty("출판?��").toString());
+			pstmt.setString(3, book.getSpec().getProperty("???��").toString());
 			pstmt.setString(4, String.valueOf(book.getSerialNumber()));
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -151,10 +156,10 @@ public class DatabaseController {
 			pstmt.setInt(2, id);
 			int n = pstmt.executeUpdate();
 			if (n > 0) {
-				System.out.println("성공");
+				System.out.println("?���?");
 				return true;
 			} else {
-				System.out.println("실패");
+				System.out.println("?��?��");
 				return false;
 			}
 		} catch (SQLException e) {
@@ -164,7 +169,7 @@ public class DatabaseController {
 		return true;
 	}
 	
-	/********************** 관리가 계정 확인 ****************************/
+	/********************** �?리�? 계정 ?��?�� ****************************/
 	public boolean checkAccount(String id, String pw) {
 		PreparedStatement pstmt;
 		ResultSet resultSet = null;
@@ -186,7 +191,7 @@ public class DatabaseController {
 		return false;
 	}
 	
-	/********************** 테이블의 컬럼명 가져오기 ****************************/
+	/********************** ?��?��블의 컬럼�? �??��?���? ****************************/
 	public String[] getColumnNames() {
 		return columnNames;
 	}

@@ -1,6 +1,6 @@
-/* 파일 : LoginFrame.java						*
- * 과목명 : 객체지향시스템분석및설꼐					*
- * 서술 : 관리자 로그인 버튼을 눌렀을 때 보여주는 프레임	*/
+/* ?��?�� : LoginFrame.java						*
+ * 과목�? : 객체�??��?��?��?��분석및설�?					*
+ * ?��?�� : �?리자 로그?�� 버튼?�� ?��???�� ?�� 보여주는 ?��?��?��	*/
 package boundary;
 import java.awt.GridLayout;
 import java.awt.Label;
@@ -18,7 +18,7 @@ import javax.swing.JTextField;
 
 public class LoginFrame extends JFrame {
 	
-	public LoginFrame(String title, BookPanel objectPanel, DatabaseController dbController) {
+	public LoginFrame(String title, BookPanel bookPanel, DatabaseController dbController) {
 		
 		GridLayout gridLayout = new GridLayout(3, 2, 20, 20);
 		setLayout(gridLayout);
@@ -30,18 +30,18 @@ public class LoginFrame extends JFrame {
 		JPasswordField txtPw = new JPasswordField(10);
 		add(txtPw);
 		
-		JButton btnOK = new JButton("확인");
+		JButton btnOK = new JButton("?��?��");
 		btnOK.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				if(dbController.checkAccount(txtId.getText(), txtPw.getText())) {
-					objectPanel.login(true);
+					bookPanel.login(true);
 					setVisible(false);
 					dispose();
 				}
 				else
-					JOptionPane.showMessageDialog(null, "존재하지 않는 계정임");
+					JOptionPane.showMessageDialog(null, "존재?���? ?��?�� 계정?��");
 			}
 		});
 		add(btnOK);
@@ -67,4 +67,16 @@ public class LoginFrame extends JFrame {
 		setSize(400, 250);
 		setVisible(true);
 	}
+
+	public void create() {
+			return;
+		}
+
+	public void Operation1() {
+			return;
+		}
+
+	public LoginFrame() {
+			return;
+		}
 }

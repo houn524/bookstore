@@ -1,6 +1,6 @@
-/* íŒŒì¼ : InsertFrame.java					*
- * ê³¼ëª©ëª… : ê°ì²´ì§€í–¥ì‹œìŠ¤í…œë¶„ì„ë°ì„¤ê¼				*
- * ì„œìˆ  : ì‚½ì… ë²„íŠ¼ì„ ëˆŒë €ì„ ì‹œ ì†ì„±ë“¤ì„ ì…ë ¥í•  ìˆ˜ ìˆëŠ” í”„ë ˆì„ ìƒì„±	*/
+/* ?ŒŒ?¼ : InsertFrame.java					*
+ * ê³¼ëª©ëª? : ê°ì²´ì§??–¥?‹œ?Š¤?…œë¶„ì„ë°ì„¤ê¼?				*
+ * ?„œ?ˆ  : ?‚½?… ë²„íŠ¼?„ ?ˆŒ???„ ?‹œ ?†?„±?“¤?„ ?…? ¥?•  ?ˆ˜ ?ˆ?Š” ?”„? ˆ?„ ?ƒ?„±	*/
 package boundary;
 
 import java.awt.Component;
@@ -24,7 +24,7 @@ import javax.swing.JTextField;
 import entity.Book;
 import entity.BookProperties;
 
-/********************** ì‚½ì…ë²„íŠ¼ ëˆŒë €ì„ ë•Œ ëœ¨ëŠ” í”„ë ˆì„ ****************************/
+/********************** ?‚½?…ë²„íŠ¼ ?ˆŒ???„ ?•Œ ?œ¨?Š” ?”„? ˆ?„ ****************************/
 public class InsertFrame extends JFrame {
 
 	private String[] colNames;
@@ -39,7 +39,7 @@ public class InsertFrame extends JFrame {
 
 		colNames = dbController.getColumnNames();
 
-		/********************** í”„ë ˆì„ ì•ˆì˜ ì»´í¬ë„ŒíŠ¸ë“¤ ì„¤ì • ****************************/
+		/********************** ?”„? ˆ?„ ?•ˆ?˜ ì»´í¬?„Œ?Š¸?“¤ ?„¤? • ****************************/
 		int i = 0;
 		ArrayList enumList = new ArrayList();
 		for (Object component : _components) {
@@ -50,9 +50,9 @@ public class InsertFrame extends JFrame {
 			i++;
 		}
 
-		btnOK = new JButton("í™•ì¸");
+		btnOK = new JButton("?™•?¸");
 		
-		/********************** í™•ì¸ ë²„íŠ¼ ëˆŒë €ì„ ì‹œ ë°ì´í„°ë² ì´ìŠ¤ì— ì¶”ê°€ ****************************/
+		/********************** ?™•?¸ ë²„íŠ¼ ?ˆŒ???„ ?‹œ ?°?´?„°ë² ì´?Š¤?— ì¶”ê? ****************************/
 		btnOK.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -75,7 +75,7 @@ public class InsertFrame extends JFrame {
 					dispose();
 				} else
 					JOptionPane.showMessageDialog(null, 
-						"SerialNumberê°€ ì¤‘ë³µë˜ì§€ ì•Šê²Œ ì…ë ¥í•˜ì‹œì˜¤.");
+						"SerialNumberê°? ì¤‘ë³µ?˜ì§? ?•Šê²? ?…? ¥?•˜?‹œ?˜¤.");
 			}
 		});
 
@@ -92,7 +92,7 @@ public class InsertFrame extends JFrame {
 		GridLayout gridLayout = new GridLayout(colNames.length, 2, 10, 10);
 		setLayout(gridLayout);
 
-		/********************** íŒ¨ë„ì— ì»´í¬ë„ŒíŠ¸ ì¶”ê°€ ****************************/
+		/********************** ?Œ¨?„?— ì»´í¬?„Œ?Š¸ ì¶”ê? ****************************/
 		i = 1;
 		for (Object component : components) {
 			add(new JLabel((colNames[i].toString() + " : "), Label.LEFT));
@@ -112,4 +112,8 @@ public class InsertFrame extends JFrame {
 		setSize(400, 400);
 		setVisible(true);
 	}
+
+	public InsertFrame() {
+			return;
+		}
 }
