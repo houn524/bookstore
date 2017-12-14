@@ -55,7 +55,6 @@ public class InsertFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				Map properties = new LinkedHashMap();
-				System.out.println("compoents size = " + components.size());
 				for (int i = 0; i < components.size() - 1; i++) {
 					Object component = components.get(i + 1);
 					if (component instanceof JTextField)

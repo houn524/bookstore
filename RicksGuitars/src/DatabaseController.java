@@ -158,28 +158,31 @@ public class DatabaseController {
 		}
 	}
 	
-	public boolean checkoutBook(Book book, boolean checked) {
-		Statement statement = null;
-		ArrayList<String> specList = new ArrayList<String>(book.getSpec().getProperties().keySet());
-
+	public boolean checkoutBook(int id, boolean checked) {
 		PreparedStatement pstmt;
 		String sql = "update book set checkout=? where id=?";
 		try {
 			pstmt = connection.prepareStatement(sql);
 			pstmt.setBoolean(1, checked);
-			pstmt.setString(2, String.valueOf(book.getSerialNumber()));
-			pstmt.executeUpdate();
+			pstmt.setInt(2, id);
+//			pstmt.setString(2, String.valueOf(book.getSerialNumber()));
+			int n = pstmt.executeUpdate();
+			if (n > 0) {
+				System.out.println("성공");
+				return true;
+			} else {
+				System.out.println("실패");
+				return false;
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return true;
 	}
 	
 	/********************** 관리가 계정 확인 ****************************/
 	public boolean checkAccount(String id, String pw) {
-		Statement statement = null;
 		PreparedStatement pstmt;
 		ResultSet resultSet = null;
 		String sql = "select * from admin where id=? and pw=?";
@@ -199,6 +202,26 @@ public class DatabaseController {
 		}
 		return false;
 	}
+	
+//	public Book findBook(String id) {
+//		PreparedStatement pstmt;
+//		ResultSet resultSet = null;
+//		Book book = null;
+//		String sql = "select * from book where id=?";
+//		try {
+//			pstmt = connection.prepareStatement(sql);
+//			pstmt.setInt(1, Integer.parseInt(id));
+//			resultSet = pstmt.executeQuery();
+//			if(resultSet.isBeforeFirst()) {
+//				book = new Book();
+//			} else {
+//				return false;
+//			}
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 
 	/********************** 테이블의 컬럼명 가져오기 ****************************/
 	public String[] getColumnNames() {

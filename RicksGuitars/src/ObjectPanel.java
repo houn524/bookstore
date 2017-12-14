@@ -25,6 +25,7 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -51,7 +52,7 @@ public class ObjectPanel extends JPanel {
 	private boolean isSearching = false;
 	private boolean isLoggedin = false;
 	private BookProperties searchingSpec;
-	JButton btnDelete, btnInsert, btnLogin, btnLogout, btnEdit, btnCheckout;
+	JButton btnDelete, btnInsert, btnLogin, btnLogout, btnEdit, btnCheckout, btnReturn;
 	protected JPanel editSpecPane;
 	protected List components;
 
@@ -167,17 +168,16 @@ public class ObjectPanel extends JPanel {
 				ArrayList<Integer> rowList = new ArrayList<Integer>();
 				for (int i = 0; i < defaultTableModel.getRowCount(); i++) {
 					if ((boolean) defaultTableModel.getValueAt(i, 0) == true) {
-						if(dbController.checkoutBook(inventory.getByRow(i), true)) {
+						if(dbController.checkoutBook(inventory.getByRow(i).getSerialNumber(), true))
 							clearSpecField();
-						}
 					}
 				}
 				
-				updateTable(null);
-
 				if (isSearching) {
-					defaultInventory = inventory;
-					searchTable(searchingSpec);
+					updateTable(null);
+					searchTable();
+				} else {
+					updateTable(null);
 				}
 			}
 		});
@@ -197,7 +197,7 @@ public class ObjectPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				logout();
+				login(false);
 			}
 		});
 
@@ -210,7 +210,7 @@ public class ObjectPanel extends JPanel {
 					defaultInventory = inventory;
 				
 				searchingSpec = getSpecField();
-				searchTable(searchingSpec);
+				searchTable();
 				isSearching = true;
 				clearSpecField();
 			}
@@ -233,10 +233,20 @@ public class ObjectPanel extends JPanel {
 
 				if (isSearching) {
 					defaultInventory = inventory;
-					searchTable(searchingSpec);
+					searchTable();
 				}
 
 				clearSpecField();
+			}
+		});
+		
+		btnReturn = new JButton("반납");
+		btnReturn.setVisible(false);
+		btnReturn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				ReturnFrame returnFrame = new ReturnFrame("반납", instance, dbController);
 			}
 		});
 
@@ -264,6 +274,7 @@ public class ObjectPanel extends JPanel {
 		invenButtonPane.add(btnDelete);
 		invenButtonPane.add(btnInsert);
 		invenButtonPane.add(btnCheckout);
+		invenButtonPane.add(btnReturn);
 		invenButtonPane.add(btnLogin);
 		invenButtonPane.add(btnLogout);
 
@@ -305,7 +316,7 @@ public class ObjectPanel extends JPanel {
 		add(inventoryPane, BorderLayout.CENTER);
 		add(editPane, BorderLayout.EAST);
 	}
-
+	
 	/********************** 데이터베이스에서 데이터들을 읽고 테이블에 뿌려줌 ****************************/
 	public void updateTable(ArrayList<Book> searchResult) {
 		if (searchResult != null) {
@@ -335,6 +346,8 @@ public class ObjectPanel extends JPanel {
 				BookProperties spec = new BookProperties(properties);
 				inventory.addBook(Integer.parseInt((String)data[i][1]), spec);
 			}			
+			isSearching = false;
+			defaultInventory = inventory;
 		}
 
 		/********************** 테이블 수정 불가 ****************************/
@@ -387,10 +400,10 @@ public class ObjectPanel extends JPanel {
 	}
 
 	/********************** 악기 속성들로 검색 ****************************/
-	public void searchTable(BookProperties spec) {
+	public void searchTable() {
 		ArrayList<Book> searchResult;
 
-		searchResult = defaultInventory.search(spec);
+		searchResult = defaultInventory.search(searchingSpec);
 
 		updateTable(searchResult);
 	}
@@ -400,7 +413,6 @@ public class ObjectPanel extends JPanel {
 		Map properties = new LinkedHashMap();
 		for (int i = 0; i < components.size() - 1; i++) {
 			Object component = components.get(i + 1);
-			System.out.println("getSpecField : " + title[i + 2] + " : " + ((JTextField)component).getText());
 			if (component instanceof JComboBox)
 				properties.put(title[i + 2], ((JComboBox) component).getSelectedItem());
 			else if (component instanceof JTextField) {
@@ -428,23 +440,14 @@ public class ObjectPanel extends JPanel {
 		return isSearching;
 	}
 	
-	public void login() {
-		isLoggedin = true;
-		btnDelete.setVisible(true);
-		btnInsert.setVisible(true);
-		btnLogin.setVisible(false);
-		btnLogout.setVisible(true);
-		btnEdit.setVisible(true);
-		revalidate();
-	}
-	
-	public void logout() {
-		isLoggedin = false;
-		btnDelete.setVisible(false);
-		btnInsert.setVisible(false);
-		btnLogin.setVisible(true);
-		btnLogout.setVisible(false);
-		btnEdit.setVisible(false);
+	public void login(boolean isLogin) {
+		isLoggedin = isLogin;
+		btnDelete.setVisible(isLogin);
+		btnInsert.setVisible(isLogin);
+		btnLogin.setVisible(!isLogin);
+		btnLogout.setVisible(isLogin);
+		btnEdit.setVisible(isLogin);
+		btnReturn.setVisible(isLogin);
 		revalidate();
 	}
 }

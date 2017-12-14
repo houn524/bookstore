@@ -2,8 +2,6 @@ import java.awt.GridLayout;
 import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,34 +10,38 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class LoginFrame extends JFrame {
+public class ReturnFrame extends JFrame {
+	
 	private DatabaseController dbController;
 	
-	public LoginFrame(String title, ObjectPanel objectPanel, DatabaseController dbController) {
+	public ReturnFrame(String title, ObjectPanel objectPanel, DatabaseController dbController) {
 		this.dbController = dbController;
 		
-		GridLayout gridLayout = new GridLayout(3, 2, 20, 20);
+		GridLayout gridLayout = new GridLayout(2, 2, 20, 20);
 		setLayout(gridLayout);
 		
-		add(new JLabel("ID : ", Label.LEFT));
-		JTextField txtId = new JTextField(10);
-		add(txtId);
-		add(new JLabel("PASSWORD : ", Label.LEFT));
-		JPasswordField txtPw = new JPasswordField(10);
-		add(txtPw);
+		add(new JLabel("SerialNumber : ", Label.LEFT));
+		JTextField txtNumber = new JTextField(10);
+		add(txtNumber);
 		
-		JButton btnOK = new JButton("확인");
+		JButton btnOK = new JButton("반납");
 		btnOK.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				if(dbController.checkAccount(txtId.getText(), txtPw.getText())) {
-					objectPanel.login(true);
+				if(dbController.checkoutBook(Integer.parseInt(txtNumber.getText()), false)) {
+					if(objectPanel.isSearching()) {
+						objectPanel.updateTable(null);
+						objectPanel.searchTable();
+					} else {
+						objectPanel.updateTable(null);
+					}
+
 					setVisible(false);
 					dispose();
 				}
 				else
-					JOptionPane.showMessageDialog(null, "존재하지 않는 계정임");
+					JOptionPane.showMessageDialog(null, "존재하지 시리얼 넘버임");
 			}
 		});
 		add(btnOK);
@@ -56,13 +58,8 @@ public class LoginFrame extends JFrame {
 		add(btnCancel);
 		
 		setTitle(title);
-		addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
-				setVisible(false);
-				dispose();
-			}
-		});
 		setSize(400, 250);
 		setVisible(true);
 	}
+
 }

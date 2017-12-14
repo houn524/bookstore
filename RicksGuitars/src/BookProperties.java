@@ -31,12 +31,10 @@ public class BookProperties {
 			String propertyName = (String) i.next();
 			System.out.println(propertyName);
 			if (otherSpec.getProperty(propertyName).equals("")) {
-				System.out.println("공백");
 				continue;
 			}
 				
 			if (!((String) properties.get(propertyName)).contains((CharSequence) otherSpec.getProperty(propertyName))) {
-				System.out.println("false");
 				return false;
 			}
 		}
