@@ -103,9 +103,6 @@ public class DatabaseController {
 			columnNames[3] = "출판사";
 			columnNames[4] = "저자";
 			columnNames[5] = "대출";
-//			for (int i = 1; i < colCount; i++) {
-//				this.columnNames[i] = resultSet.getMetaData().getColumnName(i);
-//			}
 
 			datas = new Object[rowCount][colCount];
 			for (int i = 0; i < rowCount; i++) {

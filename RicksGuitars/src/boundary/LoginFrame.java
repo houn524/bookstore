@@ -1,6 +1,6 @@
-/* ?��?�� : LoginFrame.java						*
- * 과목�? : 객체�??��?��?��?��분석및설�?					*
- * ?��?�� : �?리자 로그?�� 버튼?�� ?��???�� ?�� 보여주는 ?��?��?��	*/
+/* 파일 : LoginFrame.java						*
+ * 과목명 : 객체지향시스템분석및설계					*
+ * 서술 : 관리자 로그인 버튼을 눌렀을 때 보여주는 프레임	*/
 package boundary;
 import java.awt.GridLayout;
 import java.awt.Label;
@@ -41,7 +41,7 @@ public class LoginFrame extends JFrame {
 					dispose();
 				}
 				else
-					JOptionPane.showMessageDialog(null, "존재?���? ?��?�� 계정?��");
+					JOptionPane.showMessageDialog(null, "존재하지 않는 계정임");
 			}
 		});
 		add(btnOK);
@@ -67,16 +67,4 @@ public class LoginFrame extends JFrame {
 		setSize(400, 250);
 		setVisible(true);
 	}
-
-	public void create() {
-			return;
-		}
-
-	public void Operation1() {
-			return;
-		}
-
-	public LoginFrame() {
-			return;
-		}
 }

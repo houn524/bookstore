@@ -9,7 +9,7 @@ import javax.swing.JTabbedPane;
 /********************** 메인 프레임 ****************************/
 public class MainFrame extends JFrame {
 
-	private BookPanel guitarPane, mandolinPane;
+	private BookPanel bookPanel;
 
 	public MainFrame(String title) {
 		setTitle(title);
@@ -25,8 +25,8 @@ public class MainFrame extends JFrame {
 		JTabbedPane tPane = new JTabbedPane();
 		add(tPane);
 
-		guitarPane = new BookPanel();
-		tPane.addTab("Book", guitarPane);
+		bookPanel = new BookPanel();
+		tPane.addTab("Book", bookPanel);
 
 	}
 

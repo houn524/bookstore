@@ -1,6 +1,6 @@
-/* ?ŒŒ?¼ : ReturnFrame.java					*
- * ê³¼ëª©ëª? : ê°ì²´ì§??–¥?‹œ?Š¤?…œë¶„ì„ë°ì„¤ê¼?					*
- * ?„œ?ˆ  : ë°˜ë‚© ë²„íŠ¼?„ ?ˆŒ???„ ?•Œ ë³´ì—¬ì£¼ëŠ” ?”„? ˆ?„			*/
+/* íŒŒì¼ : ReturnFrame.java					*
+ * ê³¼ëª©ëª… : ê°ì²´ì§€í–¥ì‹œìŠ¤í…œë¶„ì„ë°ì„¤ê³„					*
+ * ì„œìˆ  : ë°˜ë‚© ë²„íŠ¼ì„ ëˆŒë €ì„ ë•Œ ë³´ì—¬ì£¼ëŠ” í”„ë ˆì„			*/
 package boundary;
 import java.awt.GridLayout;
 import java.awt.Label;
@@ -44,7 +44,7 @@ public class ReturnFrame extends JFrame {
 					dispose();
 				}
 				else
-					JOptionPane.showMessageDialog(null, "ì¡´ì¬?•˜ì§? ?‹œë¦¬ì–¼ ?„˜ë²„ì„");
+					JOptionPane.showMessageDialog(null, "ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ì‹œë¦¬ì–¼ ë„˜ë²„ì…ë‹ˆë‹¤.");
 			}
 		});
 		add(btnOK);
@@ -64,8 +64,4 @@ public class ReturnFrame extends JFrame {
 		setSize(400, 250);
 		setVisible(true);
 	}
-
-	public ReturnFrame() {
-			return;
-		}
 }

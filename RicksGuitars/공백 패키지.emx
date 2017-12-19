@@ -541,10 +541,91 @@
         <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_C9O7beC0EeeB6_uYxhNStw" points="[12, 9, -90, -62]$[110, 91, 8, 20]"/>
       </edges>
     </contents>
+    <contents xmi:type="umlnotation:UMLDiagram" xmi:id="_q8RiEODGEeeB6_uYxhNStw" type="Class" name="클래스 다이어그램1">
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_r3iQcODGEeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_r3iQcuDGEeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_r3iQc-DGEeeB6_uYxhNStw" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_r3iQdODGEeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_r3iQdeDGEeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_r3i3gODGEeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_r3i3geDGEeeB6_uYxhNStw" visible="false" type="ANNOTATION_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_r3i3guDGEeeB6_uYxhNStw" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_r3i3g-DGEeeB6_uYxhNStw" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+        <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=BookPanel%5Bjcu%5Ename=BookPanel.java%5Bjpack%5Ename=boundary%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=bookstore%5D%5D%5D%5D$uml.Class"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r3iQceDGEeeB6_uYxhNStw" x="264" y="396"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_ti-ekODGEeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_ti_FoODGEeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_ti_FoeDGEeeB6_uYxhNStw" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_ti_ssODGEeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_ti_sseDGEeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_ti_ssuDGEeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_ti_ss-DGEeeB6_uYxhNStw" visible="false" type="ANNOTATION_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_ti_stODGEeeB6_uYxhNStw" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_ti_steDGEeeB6_uYxhNStw" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+        <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=DatabaseConnector%5Bjcu%5Ename=DatabaseConnector.java%5Bjpack%5Ename=boundary%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=bookstore%5D%5D%5D%5D$uml.Class"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ti-ekeDGEeeB6_uYxhNStw" x="14763" y="7196"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_uCo2EODGEeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_uCpdIeDGEeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_uCpdIuDGEeeB6_uYxhNStw" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_uCpdI-DGEeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_uCpdJODGEeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_uCpdJeDGEeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_uCpdJuDGEeeB6_uYxhNStw" visible="false" type="ANNOTATION_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_uCqEMODGEeeB6_uYxhNStw" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_uCqEMeDGEeeB6_uYxhNStw" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+        <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=Book%5Bjcu%5Ename=Book.java%5Bjpack%5Ename=entity%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=bookstore%5D%5D%5D%5D$uml.Class"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uCpdIODGEeeB6_uYxhNStw" x="13200" y="2376"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_zOhFEODGEeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_zOhsIODGEeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_zOhsIeDGEeeB6_uYxhNStw" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_zOhsIuDGEeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_zOhsI-DGEeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_zOhsJODGEeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_zOhsJeDGEeeB6_uYxhNStw" visible="false" type="ANNOTATION_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_zOhsJuDGEeeB6_uYxhNStw" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_zOhsJ-DGEeeB6_uYxhNStw" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+        <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=DatabaseController%5Bjcu%5Ename=DatabaseController.java%5Bjpack%5Ename=boundary%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=bookstore%5D%5D%5D%5D$uml.Class"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zOhFEeDGEeeB6_uYxhNStw" x="13229" y="11932"/>
+      </children>
+      <children xmi:type="umlnotation:UMLShape" xmi:id="_zkcRwODGEeeB6_uYxhNStw" fontName="맑은 고딕" fontHeight="8" transparency="0" lineColor="14263149" lineWidth="1" showStereotype="Label">
+        <children xmi:type="notation:DecorationNode" xmi:id="_zkc40ODGEeeB6_uYxhNStw" type="ImageCompartment">
+          <layoutConstraint xmi:type="notation:Size" xmi:id="_zkc40eDGEeeB6_uYxhNStw" width="1320" height="1320"/>
+        </children>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_zkc40uDGEeeB6_uYxhNStw" type="Stereotype"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_zkc40-DGEeeB6_uYxhNStw" type="Name"/>
+        <children xmi:type="notation:BasicDecorationNode" xmi:id="_zkc41ODGEeeB6_uYxhNStw" type="Parent"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_zkc41eDGEeeB6_uYxhNStw" visible="false" type="ANNOTATION_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_zkc41uDGEeeB6_uYxhNStw" type="ANNOTATED_ATTRIBUTE_COMPARTMENT"/>
+        <children xmi:type="notation:ListCompartment" xmi:id="_zkc41-DGEeeB6_uYxhNStw" type="ANNOTATED_OPERATION_COMPARTMENT"/>
+        <element xmi:type="uml:Class" href="mmi:///#jsrctype%5Ename=DatabaseConnector%5Bjcu%5Ename=DatabaseConnector.java%5Bjpack%5Ename=boundary%5Bjsrcroot%5Esrcfolder=src%5Bproject%5Eid=bookstore%5D%5D%5D%5D$uml.Class"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zkcRweDGEeeB6_uYxhNStw" x="7260" y="5808"/>
+      </children>
+      <element xsi:nil="true"/>
+    </contents>
   </eAnnotations>
   <packageImport xmi:id="_3u7P0-CzEeeB6_uYxhNStw">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8ssPsODGEeeB6_uYxhNStw" name="Class1">
+    <ownedAttribute xmi:id="_9mio0ODGEeeB6_uYxhNStw" name="class2" visibility="private" type="_9AO2wODGEeeB6_uYxhNStw" association="_9miBwODGEeeB6_uYxhNStw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9mj28eDGEeeB6_uYxhNStw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9mj28ODGEeeB6_uYxhNStw"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9AO2wODGEeeB6_uYxhNStw" name="Class2"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9miBwODGEeeB6_uYxhNStw" memberEnd="_9mio0ODGEeeB6_uYxhNStw _9mkeAODGEeeB6_uYxhNStw">
+    <ownedEnd xmi:id="_9mkeAODGEeeB6_uYxhNStw" name="" visibility="private" type="_8ssPsODGEeeB6_uYxhNStw" association="_9miBwODGEeeB6_uYxhNStw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9mlFEeDGEeeB6_uYxhNStw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9mlFEODGEeeB6_uYxhNStw"/>
+    </ownedEnd>
+  </packagedElement>
   <profileApplication xmi:id="_3u7P1OCzEeeB6_uYxhNStw">
     <eAnnotations xmi:id="_3u7P1eCzEeeB6_uYxhNStw" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Standard.profile.uml#_yzU58YinEdqtvbnfB2L_5w"/>

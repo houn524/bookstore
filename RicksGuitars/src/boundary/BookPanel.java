@@ -171,7 +171,6 @@ public class BookPanel extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				ArrayList<Integer> rowList = new ArrayList<Integer>();
 				for (int i = 0; i < defaultTableModel.getRowCount(); i++) {
 					if ((boolean) defaultTableModel.getValueAt(i, 0) == true) {
 						dbController.checkoutBook(inventory.getByRow(i).getSerialNumber(), true);
