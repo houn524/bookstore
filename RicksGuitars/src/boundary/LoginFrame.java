@@ -30,7 +30,7 @@ public class LoginFrame extends JFrame {
 		JPasswordField txtPw = new JPasswordField(10);
 		add(txtPw);
 		
-		JButton btnOK = new JButton("?��?��");
+		JButton btnOK = new JButton("확인");
 		btnOK.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
